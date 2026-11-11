@@ -1,0 +1,33 @@
+# estandares/reglas_origen_capas.yml — DEMO (workspace de prueba, catálogo `workspace`)
+# Reglas obligatorias de origen por capa. Las usan el agente de modelado, la revisión y los controles.
+catalogo: workspace
+capas:
+  bronce:
+    esquemas: ["bronce"]
+  referencia:
+    esquemas: ["referencia"]
+  silver:
+    patron_esquema: "*_silver"
+    origenes_permitidos:
+      - capa: bronce
+        esquemas: ["bronce"]
+      - capa: silver
+        patron_esquema: "*_silver"
+      - capa: referencia
+        esquemas: ["referencia"]
+    prohibido:
+      - lectura directa de sistema fuente (JDBC, catálogos federados, read_files, rutas s3:// / abfss:// o volúmenes de aterrizaje)
+      - capa gold
+  gold:
+    patron_esquema: "*_gold"
+    origenes_permitidos:
+      - capa: silver
+        patron_esquema: "*_silver"
+      - capa: gold
+        patron_esquema: "*_gold"
+    prohibido:
+      - capa bronce
+      - capa referencia (si Gold necesita un dato de referencia, primero se incorpora a Silver)
+      - lectura directa de sistema fuente
+evidencia:
+  linaje: "Unity Catalog (Catalog Explorer > Lineage) y system.access.table_lineage"

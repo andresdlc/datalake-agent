@@ -1,0 +1,12 @@
+SIN_TABLAS | workspace.clientes_pn_silver.clientes_pn_historico <- (solo pipeline f2a174f1-4360-4aa4-bf90-6922581776d1; ver control a nivel pipeline)
+PASS | workspace.clientes_pn_silver.clientes_pn_carga_validada <- workspace.referencia.tipos_documento
+PASS | workspace.clientes_pn_silver.clientes_pn_carga_validada <- workspace.referencia.segmentos
+PASS | workspace.clientes_pn_silver.clientes_pn_carga_validada <- workspace.bronce.clientes_pn_snapshot
+PASS | workspace.clientes_pn_silver.clientes_pn_carga_validada <- workspace.referencia.provincias
+PASS | workspace.clientes_pn_silver.cuentas_pn <- workspace.referencia.productos
+PASS | workspace.clientes_pn_silver.cuentas_pn <- workspace.bronce.cuentas_pn_snapshot
+PASS | workspace.clientes_pn_silver.chk_clientes_pn_vigencias <- workspace.clientes_pn_silver.clientes_pn_historico
+PASS | workspace.clientes_pn_gold.cliente_360 <- workspace.clientes_pn_silver.clientes_pn_historico
+PASS | workspace.clientes_pn_gold.kpi_segmento_provincia <- workspace.clientes_pn_gold.cliente_360
+PASS | workspace.clientes_pn_gold.kpi_movimientos_cartera <- workspace.clientes_pn_silver.clientes_pn_historico
+RESULTADO LINAJE (API): CONFORME

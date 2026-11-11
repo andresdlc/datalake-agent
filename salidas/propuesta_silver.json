@@ -1,0 +1,314 @@
+{
+  "id": "20261110T220949-7eaff2-silver",
+  "ejecucion": "20261110T220949-7eaff2",
+  "capa": "silver",
+  "propuesta": {
+    "capa": "silver",
+    "resumen": "Modelo de datos Silver para el dominio clientes personas naturales. Incluye histórico SCD2 de clientes y tabla de cuentas vigentes, con homologación de códigos de referencia y control de calidad.",
+    "tablas": [
+      {
+        "nombre": "clientes_pn_historico",
+        "descripcion": "Histórico SCD2 de clientes personas naturales a partir de las instantáneas de Bronce. Incluye columnas de vigencia __START_AT y __END_AT y hash de atributos para detección de cambios.",
+        "grano": "cliente (cod_cliente) por versión de carga",
+        "clave_negocio": [
+          "cod_cliente"
+        ],
+        "patron_carga": "SCD2_DESDE_SNAPSHOT",
+        "origenes": [
+          "workspace.bronce.clientes_pn_snapshot",
+          "workspace.referencia.tipos_documento",
+          "workspace.referencia.provincias",
+          "workspace.referencia.segmentos"
+        ],
+        "columnas": [
+          {
+            "nombre": "cod_cliente",
+            "tipo": "STRING",
+            "descripcion": "Código interno del cliente",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "cod_tipo_documento",
+            "tipo": "STRING",
+            "descripcion": "Código homologado del tipo de documento (CEDULA, PASAPORTE)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "join con referencia.tipos_documento usando array_contains en valores_origen"
+          },
+          {
+            "nombre": "num_identificacion",
+            "tipo": "STRING",
+            "descripcion": "Número de documento de identidad del cliente",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "nombre_completo",
+            "tipo": "STRING",
+            "descripcion": "Nombre y apellido concatenados",
+            "sensibilidad_pii": "contacto",
+            "regla_transformacion": "concat(trim(nombres), ' ', trim(apellidos))"
+          },
+          {
+            "nombre": "fecha_nacimiento",
+            "tipo": "DATE",
+            "descripcion": "Fecha de nacimiento del cliente",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "to_date(fecha_nacimiento, 'dd/MM/yyyy')"
+          },
+          {
+            "nombre": "genero",
+            "tipo": "STRING",
+            "descripcion": "Género del cliente (M/F)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "upper(trim(genero))"
+          },
+          {
+            "nombre": "estado_civil",
+            "tipo": "STRING",
+            "descripcion": "Estado civil del cliente",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "upper(trim(estado_civil))"
+          },
+          {
+            "nombre": "email",
+            "tipo": "STRING",
+            "descripcion": "Correo electrónico del cliente",
+            "sensibilidad_pii": "contacto",
+            "regla_transformacion": "lower(trim(email))"
+          },
+          {
+            "nombre": "telefono_movil",
+            "tipo": "STRING",
+            "descripcion": "Teléfono móvil del cliente",
+            "sensibilidad_pii": "contacto",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "cod_provincia",
+            "tipo": "STRING",
+            "descripcion": "Código INEC de la provincia de residencia",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "nombre_provincia",
+            "tipo": "STRING",
+            "descripcion": "Nombre de la provincia (catálogo referencia)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "join con referencia.provincias"
+          },
+          {
+            "nombre": "region",
+            "tipo": "STRING",
+            "descripcion": "Región geográfica de la provincia (catálogo referencia)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "join con referencia.provincias"
+          },
+          {
+            "nombre": "ciudad",
+            "tipo": "STRING",
+            "descripcion": "Ciudad de residencia del cliente",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "direccion",
+            "tipo": "STRING",
+            "descripcion": "Dirección del cliente",
+            "sensibilidad_pii": "contacto",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "segmento",
+            "tipo": "STRING",
+            "descripcion": "Segmento comercial del cliente (MASIVO, PREFERENTE, PREMIUM)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "upper(trim(segmento))"
+          },
+          {
+            "nombre": "fecha_vinculacion",
+            "tipo": "DATE",
+            "descripcion": "Fecha en que el cliente se vinculó al banco",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "to_date(fecha_vinculacion, 'dd/MM/yyyy')"
+          },
+          {
+            "nombre": "version_carga",
+            "tipo": "INT",
+            "descripcion": "Número de versión de la carga de Bronce",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "fecha_carga",
+            "tipo": "DATE",
+            "descripcion": "Fecha de ejecución de la carga",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "hash_atributos",
+            "tipo": "STRING",
+            "descripcion": "Hash SHA2 de los atributos clave para detección de cambios",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sha2(concat_ws('|', cod_cliente, num_identificacion, fecha_nacimiento, cod_provincia, segmento), 256)"
+          },
+          {
+            "nombre": "__START_AT",
+            "tipo": "TIMESTAMP",
+            "descripcion": "Marca de tiempo de inicio de vigencia del registro",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "current_timestamp()"
+          },
+          {
+            "nombre": "__END_AT",
+            "tipo": "TIMESTAMP",
+            "descripcion": "Marca de tiempo de fin de vigencia (null mientras está vigente)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "null"
+          }
+        ],
+        "expectations": [
+          {
+            "nombre": "clave_nula_cod_cliente",
+            "expresion": "cod_cliente IS NOT NULL",
+            "accion": "FAIL"
+          },
+          {
+            "nombre": "identificacion_no_nula",
+            "expresion": "num_identificacion IS NOT NULL",
+            "accion": "FAIL"
+          },
+          {
+            "nombre": "fecha_nacimiento_valida",
+            "expresion": "fecha_nacimiento IS NOT NULL",
+            "accion": "WARN"
+          },
+          {
+            "nombre": "segmento_homologado",
+            "expresion": "segmento IN (SELECT cod_segmento FROM workspace.referencia.segmentos)",
+            "accion": "WARN"
+          },
+          {
+            "nombre": "provincia_homologada",
+            "expresion": "cod_provincia IN (SELECT cod_provincia FROM workspace.referencia.provincias)",
+            "accion": "WARN"
+          }
+        ],
+        "kpis": [],
+        "sql": "SELECT\n  c.cod_cliente,\n  td.cod_tipo_documento AS cod_tipo_documento,\n  c.num_identificacion,\n  CONCAT(TRIM(c.nombres), ' ', TRIM(c.apellidos)) AS nombre_completo,\n  TO_DATE(c.fecha_nacimiento, 'dd/MM/yyyy') AS fecha_nacimiento,\n  UPPER(TRIM(c.genero)) AS genero,\n  UPPER(TRIM(c.estado_civil)) AS estado_civil,\n  LOWER(TRIM(c.email)) AS email,\n  c.telefono_movil,\n  c.cod_provincia,\n  p.nombre_provincia,\n  p.region,\n  c.ciudad,\n  c.direccion,\n  UPPER(TRIM(c.segmento)) AS segmento,\n  TO_DATE(c.fecha_vinculacion, 'dd/MM/yyyy') AS fecha_vinculacion,\n  c.version_carga,\n  c.fecha_carga,\n  SHA2(CONCAT_WS('|', c.cod_cliente, c.num_identificacion, c.fecha_nacimiento, c.cod_provincia, c.segmento), 256) AS hash_atributos,\n  CURRENT_TIMESTAMP() AS __START_AT,\n  NULL AS __END_AT\nFROM workspace.bronce.clientes_pn_snapshot c\nLEFT JOIN workspace.referencia.tipos_documento td\n  ON ARRAY_CONTAINS(td.valores_origen, UPPER(TRIM(c.tipo_identificacion)))\nLEFT JOIN workspace.referencia.provincias p\n  ON p.cod_provincia = c.cod_provincia"
+      },
+      {
+        "nombre": "cuentas_pn",
+        "descripcion": "Cuentas y productos vigentes de la última carga de Bronce. Se homologan nombres y tipos de balance desde referencia.productos.",
+        "grano": "cuenta (num_cuenta) vigente",
+        "clave_negocio": [
+          "num_cuenta"
+        ],
+        "patron_carga": "VIGENTE_DESDE_SNAPSHOT",
+        "origenes": [
+          "workspace.bronce.cuentas_pn_snapshot",
+          "workspace.referencia.productos"
+        ],
+        "columnas": [
+          {
+            "nombre": "num_cuenta",
+            "tipo": "STRING",
+            "descripcion": "Número de cuenta del cliente",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "cod_cliente",
+            "tipo": "STRING",
+            "descripcion": "Código interno del cliente propietario de la cuenta",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "cod_producto",
+            "tipo": "STRING",
+            "descripcion": "Código del producto financiero",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "nombre_producto",
+            "tipo": "STRING",
+            "descripcion": "Nombre descriptivo del producto (catálogo referencia)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "join con referencia.productos"
+          },
+          {
+            "nombre": "tipo_balance",
+            "tipo": "STRING",
+            "descripcion": "Tipo de balance del producto (Activo / Pasivo)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "join con referencia.productos"
+          },
+          {
+            "nombre": "estado",
+            "tipo": "STRING",
+            "descripcion": "Estado de la cuenta (A=activa, I=inactiva)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "upper(trim(estado))"
+          },
+          {
+            "nombre": "saldo",
+            "tipo": "DECIMAL(18,2)",
+            "descripcion": "Saldo actual de la cuenta",
+            "sensibilidad_pii": "financiero",
+            "regla_transformacion": "CAST(REPLACE(saldo, ',', '.') AS DECIMAL(18,2))"
+          },
+          {
+            "nombre": "fecha_apertura",
+            "tipo": "DATE",
+            "descripcion": "Fecha de apertura de la cuenta",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "TO_DATE(fecha_apertura, 'dd/MM/yyyy')"
+          },
+          {
+            "nombre": "version_carga",
+            "tipo": "INT",
+            "descripcion": "Número de versión de la carga de Bronce",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          },
+          {
+            "nombre": "fecha_carga",
+            "tipo": "DATE",
+            "descripcion": "Fecha de ejecución de la carga",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "sin cambios"
+          }
+        ],
+        "expectations": [
+          {
+            "nombre": "clave_nula_num_cuenta",
+            "expresion": "num_cuenta IS NOT NULL",
+            "accion": "FAIL"
+          },
+          {
+            "nombre": "saldo_convertible",
+            "expresion": "TRY_CAST(REPLACE(saldo, ',', '.') AS DECIMAL(18,2)) IS NOT NULL",
+            "accion": "WARN"
+          },
+          {
+            "nombre": "producto_homologado",
+            "expresion": "cod_producto IN (SELECT cod_producto FROM workspace.referencia.productos)",
+            "accion": "WARN"
+          }
+        ],
+        "kpis": [],
+        "sql": "SELECT\n  cp.num_cuenta,\n  cp.cod_cliente,\n  cp.cod_producto,\n  pr.nombre_producto,\n  pr.tipo_balance,\n  UPPER(TRIM(cp.estado)) AS estado,\n  CAST(REPLACE(cp.saldo, ',', '.') AS DECIMAL(18,2)) AS saldo,\n  TO_DATE(cp.fecha_apertura, 'dd/MM/yyyy') AS fecha_apertura,\n  cp.version_carga,\n  cp.fecha_carga\nFROM workspace.bronce.cuentas_pn_snapshot cp\nLEFT JOIN workspace.referencia.productos pr\n  ON pr.cod_producto = cp.cod_producto\nWHERE cp.version_carga = (\n  SELECT MAX(version_carga) FROM workspace.bronce.cuentas_pn_snapshot\n)"
+      }
+    ]
+  },
+  "score": {
+    "conforme": true,
+    "hallazgos": []
+  },
+  "reintentos": 0,
+  "hash": "b0a3dd244b921223"
+}

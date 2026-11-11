@@ -1,0 +1,20 @@
+nivel | capa | destino | origen | veredicto | ultimo_evento_utc | eventos
+pipeline | gold | pipeline piloto_ia_gold_clientes_pn | workspace.clientes_pn_gold.cliente_360 | PASS | 2026-11-10T22:15:17.859Z | 1
+pipeline | gold | pipeline piloto_ia_gold_clientes_pn | workspace.clientes_pn_silver.clientes_pn_historico | PASS | 2026-11-10T22:15:14.211Z | 2
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.bronce.clientes_pn_snapshot | PASS | 2026-11-10T22:13:58.436Z | 9
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.bronce.cuentas_pn_snapshot | PASS | 2026-11-10T22:13:42.755Z | 3
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.clientes_pn_silver.clientes_pn_historico | PASS | 2026-11-10T22:14:01.950Z | 1
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.referencia.productos | PASS | 2026-11-10T22:13:42.755Z | 2
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.referencia.provincias | PASS | 2026-11-10T22:13:42.755Z | 2
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.referencia.segmentos | PASS | 2026-11-10T22:13:42.755Z | 2
+pipeline | silver | pipeline piloto_ia_silver_clientes_pn | workspace.referencia.tipos_documento | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | gold | workspace.clientes_pn_gold.cliente_360 | workspace.clientes_pn_silver.clientes_pn_historico | PASS | 2026-11-10T22:15:14.211Z | 1
+tabla | gold | workspace.clientes_pn_gold.kpi_movimientos_cartera | workspace.clientes_pn_silver.clientes_pn_historico | PASS | 2026-11-10T22:15:09.099Z | 1
+tabla | gold | workspace.clientes_pn_gold.kpi_segmento_provincia | workspace.clientes_pn_gold.cliente_360 | PASS | 2026-11-10T22:15:17.859Z | 1
+tabla | silver | workspace.clientes_pn_silver.chk_clientes_pn_vigencias | workspace.clientes_pn_silver.clientes_pn_historico | PASS | 2026-11-10T22:14:01.950Z | 1
+tabla | silver | workspace.clientes_pn_silver.clientes_pn_carga_validada | workspace.bronce.clientes_pn_snapshot | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | silver | workspace.clientes_pn_silver.clientes_pn_carga_validada | workspace.referencia.provincias | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | silver | workspace.clientes_pn_silver.clientes_pn_carga_validada | workspace.referencia.segmentos | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | silver | workspace.clientes_pn_silver.clientes_pn_carga_validada | workspace.referencia.tipos_documento | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | silver | workspace.clientes_pn_silver.cuentas_pn | workspace.bronce.cuentas_pn_snapshot | PASS | 2026-11-10T22:13:42.755Z | 2
+tabla | silver | workspace.clientes_pn_silver.cuentas_pn | workspace.referencia.productos | PASS | 2026-11-10T22:13:42.755Z | 2

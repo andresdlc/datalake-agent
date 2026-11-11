@@ -1,0 +1,603 @@
+{
+  "dominio": "clientes_pn (clientes personas naturales)",
+  "catalogo": "workspace",
+  "bronce": [
+    {
+      "tabla": "workspace.bronce.clientes_pn_snapshot",
+      "comentario": "Bronce - instantáneas completas de clientes personas naturales tal como llegan del core (DATOS SINTÉTICOS DE DEMO). Una carga por version_carga.",
+      "filas": 621,
+      "columnas": [
+        {
+          "nombre": "cod_cliente",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 216,
+          "longitud_min": "8",
+          "longitud_max": "8"
+        },
+        {
+          "nombre": "tipo_identificacion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "3",
+          "longitud_max": "7",
+          "formatos_observados": [
+            "AAAAAA ",
+            "AAA"
+          ]
+        },
+        {
+          "nombre": "num_identificacion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 216,
+          "longitud_min": "10",
+          "longitud_max": "10",
+          "formatos_observados": [
+            "9999999999"
+          ]
+        },
+        {
+          "nombre": "nombres",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 169,
+          "longitud_min": "9",
+          "longitud_max": "17",
+          "formatos_observados": [
+            "AAAAAA AAAAAAAA",
+            "AAAAAAAA AAAAA",
+            "AAAAAAAA AAAA"
+          ]
+        },
+        {
+          "nombre": "apellidos",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 167,
+          "longitud_min": "9",
+          "longitud_max": "19",
+          "formatos_observados": [
+            "AAAAAAA AAAAAAAAA",
+            "AAAAAA AAAAAAAA",
+            "AAAAAAA AAAAAAAA"
+          ]
+        },
+        {
+          "nombre": "fecha_nacimiento",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0193,
+          "distintos": 210,
+          "longitud_min": "10",
+          "longitud_max": "10",
+          "formatos_observados": [
+            "99/99/9999"
+          ]
+        },
+        {
+          "nombre": "genero",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "1",
+          "longitud_max": "1",
+          "valores_frecuentes": {
+            "M": 334,
+            "F": 287
+          }
+        },
+        {
+          "nombre": "estado_civil",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 5,
+          "longitud_min": "5",
+          "longitud_max": "11",
+          "valores_frecuentes": {
+            "VIUDO": 137,
+            "UNION LIBRE": 137,
+            "SOLTERO": 131,
+            "CASADO": 110,
+            "DIVORCIADO": 106
+          }
+        },
+        {
+          "nombre": "email",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 221,
+          "longitud_min": "10",
+          "longitud_max": "30",
+          "formatos_observados": [
+            "AAAAAAA999@AAAAAAA.AAAA",
+            "AAAAAAA99.AAAAA9@AAAAAAA.AAAA",
+            "AAA-AAAAAA"
+          ]
+        },
+        {
+          "nombre": "telefono_movil",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 216,
+          "longitud_min": "10",
+          "longitud_max": "10",
+          "formatos_observados": [
+            "9999999999"
+          ]
+        },
+        {
+          "nombre": "cod_provincia",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 23,
+          "longitud_min": "2",
+          "longitud_max": "2",
+          "valores_frecuentes": {
+            "09": 167,
+            "17": 117,
+            "13": 50,
+            "12": 46,
+            "01": 43,
+            "23": 41,
+            "07": 37,
+            "18": 23,
+            "14": 13,
+            "06": 10,
+            "08": 9,
+            "15": 9
+          }
+        },
+        {
+          "nombre": "ciudad",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 23,
+          "longitud_min": "4",
+          "longitud_max": "21",
+          "valores_frecuentes": {
+            "Guayaquil": 167,
+            "Quito": 117,
+            "Portoviejo": 50,
+            "Babahoyo": 46,
+            "Cuenca": 43,
+            "Santo Domingo": 41,
+            "Machala": 37,
+            "Ambato": 23,
+            "Macas": 13,
+            "Riobamba": 10,
+            "Esmeraldas": 9,
+            "Tena": 9
+          }
+        },
+        {
+          "nombre": "direccion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 226,
+          "longitud_min": "17",
+          "longitud_max": "24",
+          "formatos_observados": [
+            "AAAAAA AAAA A99-99",
+            "AAAAAA AAAA A9-999",
+            "AA. AA AAAAAA A9-99"
+          ]
+        },
+        {
+          "nombre": "segmento",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 9,
+          "longitud_min": "6",
+          "longitud_max": "11",
+          "valores_frecuentes": {
+            "MASIVO": 150,
+            "masivo": 138,
+            " MASIVO": 93,
+            "PREFERENTE": 91,
+            "preferente": 52,
+            " PREFERENTE": 43,
+            "PREMIUM": 24,
+            " PREMIUM": 18,
+            "premium": 12
+          }
+        },
+        {
+          "nombre": "fecha_vinculacion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 213,
+          "longitud_min": "10",
+          "longitud_max": "10"
+        },
+        {
+          "nombre": "version_carga",
+          "tipo": "INT",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "1",
+          "longitud_max": "1",
+          "valores_frecuentes": {
+            "3": 213,
+            "2": 208,
+            "1": 200
+          }
+        },
+        {
+          "nombre": "fecha_carga",
+          "tipo": "DATE",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "10",
+          "longitud_max": "10",
+          "valores_frecuentes": {
+            "2026-11-09": 213,
+            "2026-10-31": 208,
+            "2026-09-30": 200
+          }
+        }
+      ]
+    },
+    {
+      "tabla": "workspace.bronce.cuentas_pn_snapshot",
+      "comentario": "Bronce - instantáneas completas de cuentas/productos de clientes personas naturales (DATOS SINTÉTICOS DE DEMO).",
+      "filas": 1172,
+      "columnas": [
+        {
+          "nombre": "num_cuenta",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 406,
+          "longitud_min": "10",
+          "longitud_max": "10"
+        },
+        {
+          "nombre": "cod_cliente",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 216,
+          "longitud_min": "8",
+          "longitud_max": "8"
+        },
+        {
+          "nombre": "cod_producto",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 5,
+          "longitud_min": "2",
+          "longitud_max": "3",
+          "valores_frecuentes": {
+            "AHO": 545,
+            "TC": 261,
+            "CTE": 141,
+            "PLZ": 113,
+            "CON": 112
+          }
+        },
+        {
+          "nombre": "estado",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "1",
+          "longitud_max": "1",
+          "valores_frecuentes": {
+            "A": 1163,
+            "I": 9
+          }
+        },
+        {
+          "nombre": "saldo",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 1161,
+          "longitud_min": "5",
+          "longitud_max": "8"
+        },
+        {
+          "nombre": "fecha_apertura",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 386,
+          "longitud_min": "10",
+          "longitud_max": "10"
+        },
+        {
+          "nombre": "version_carga",
+          "tipo": "INT",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "1",
+          "longitud_max": "1",
+          "valores_frecuentes": {
+            "3": 406,
+            "2": 393,
+            "1": 373
+          }
+        },
+        {
+          "nombre": "fecha_carga",
+          "tipo": "DATE",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "10",
+          "longitud_max": "10",
+          "valores_frecuentes": {
+            "2026-11-09": 406,
+            "2026-10-31": 393,
+            "2026-09-30": 373
+          }
+        }
+      ]
+    }
+  ],
+  "referencia": [
+    {
+      "tabla": "workspace.referencia.provincias",
+      "comentario": "Catálogo de provincias del Ecuador (dato público de referencia)",
+      "filas": 24,
+      "columnas": [
+        {
+          "nombre": "cod_provincia",
+          "tipo": "STRING",
+          "comentario": "Código INEC de provincia",
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 24,
+          "longitud_min": "2",
+          "longitud_max": "2",
+          "valores_frecuentes": {
+            "10": 1,
+            "11": 1,
+            "07": 1,
+            "09": 1,
+            "06": 1,
+            "05": 1,
+            "01": 1,
+            "04": 1,
+            "03": 1,
+            "08": 1,
+            "02": 1,
+            "12": 1
+          }
+        },
+        {
+          "nombre": "nombre_provincia",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 24,
+          "longitud_min": "4",
+          "longitud_max": "30",
+          "formatos_observados": [
+            "AAAAA",
+            "AAAAAAA",
+            "AAAAAA"
+          ]
+        },
+        {
+          "nombre": "region",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 4,
+          "longitud_min": "5",
+          "longitud_max": "8",
+          "valores_frecuentes": {
+            "Sierra": 10,
+            "Costa": 7,
+            "Amazonía": 6,
+            "Insular": 1
+          }
+        }
+      ]
+    },
+    {
+      "tabla": "workspace.referencia.tipos_documento",
+      "comentario": "Catálogo de tipos de documento de identidad de personas naturales y su homologación desde los códigos de origen",
+      "filas": 2,
+      "columnas": [
+        {
+          "nombre": "cod_tipo_documento",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "6",
+          "longitud_max": "9",
+          "valores_frecuentes": {
+            "CEDULA": 1,
+            "PASAPORTE": 1
+          }
+        },
+        {
+          "nombre": "descripcion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "9",
+          "longitud_max": "20",
+          "valores_frecuentes": {
+            "Cédula de ciudadanía": 1,
+            "Pasaporte": 1
+          }
+        },
+        {
+          "nombre": "valores_origen",
+          "tipo": "ARRAY",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "16",
+          "longitud_max": "19",
+          "valores_frecuentes": {
+            "[CED, CEDULA, C]": 1,
+            "[PAS, PASAPORTE, P]": 1
+          }
+        }
+      ]
+    },
+    {
+      "tabla": "workspace.referencia.segmentos",
+      "comentario": "Catálogo de segmentos comerciales de personas naturales",
+      "filas": 3,
+      "columnas": [
+        {
+          "nombre": "cod_segmento",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "6",
+          "longitud_max": "10",
+          "valores_frecuentes": {
+            "MASIVO": 1,
+            "PREFERENTE": 1,
+            "PREMIUM": 1
+          }
+        },
+        {
+          "nombre": "descripcion",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "15",
+          "longitud_max": "19",
+          "valores_frecuentes": {
+            "Segmento masivo": 1,
+            "Segmento preferente": 1,
+            "Segmento premium": 1
+          }
+        },
+        {
+          "nombre": "orden",
+          "tipo": "INT",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 3,
+          "longitud_min": "1",
+          "longitud_max": "1",
+          "valores_frecuentes": {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        }
+      ]
+    },
+    {
+      "tabla": "workspace.referencia.productos",
+      "comentario": "Catálogo de productos (pasivo/activo)",
+      "filas": 5,
+      "columnas": [
+        {
+          "nombre": "cod_producto",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 5,
+          "longitud_min": "2",
+          "longitud_max": "3",
+          "valores_frecuentes": {
+            "TC": 1,
+            "CTE": 1,
+            "AHO": 1,
+            "PLZ": 1,
+            "CON": 1
+          }
+        },
+        {
+          "nombre": "nombre_producto",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": true,
+          "pct_nulos": 0.0,
+          "distintos": 5,
+          "longitud_min": "16",
+          "longitud_max": "18",
+          "formatos_observados": [
+            "AAAAAA AA AAAAAAA",
+            "AAAAAA AAAAAAAAA",
+            "AAAAAAAA A AAAAA"
+          ]
+        },
+        {
+          "nombre": "tipo_balance",
+          "tipo": "STRING",
+          "comentario": null,
+          "posible_pii": false,
+          "pct_nulos": 0.0,
+          "distintos": 2,
+          "longitud_min": "6",
+          "longitud_max": "6",
+          "valores_frecuentes": {
+            "Pasivo": 3,
+            "Activo": 2
+          }
+        }
+      ]
+    }
+  ],
+  "notas_carga": "Bronce recibe INSTANTÁNEAS COMPLETAS (sin CDC). version_carga identifica cada carga; un cliente ausente en una carga posterior se considera baja."
+}

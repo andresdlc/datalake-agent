@@ -1,0 +1,177 @@
+{
+  "id": "20261110T220949-7eaff2-gold",
+  "ejecucion": "20261110T220949-7eaff2",
+  "capa": "gold",
+  "propuesta": {
+    "capa": "gold",
+    "resumen": "Modelado de la capa Gold para el dominio clientes personas naturales. Se crean dos vistas materializadas: cliente_360, que consolida la información vigente de cada cliente con agregados de sus productos, y kpi_segmento_provincia, que calcula indicadores de negocio por segmento y provincia.",
+    "tablas": [
+      {
+        "nombre": "workspace.clientes_pn_gold.cliente_360",
+        "descripcion": "Vista 360 por cliente vigente. Un registro por cliente con conteo de cuentas y agregados de saldos (total y promedio).",
+        "grano": "un registro por cliente (cod_cliente) vigente",
+        "clave_negocio": [
+          "cod_cliente"
+        ],
+        "patron_carga": "VISTA_MATERIALIZADA",
+        "origenes": [
+          "workspace.clientes_pn_silver.clientes_pn_historico",
+          "workspace.clientes_pn_silver.cuentas_pn"
+        ],
+        "columnas": [
+          {
+            "nombre": "cod_cliente",
+            "tipo": "STRING",
+            "descripcion": "Código interno del cliente",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "c.cod_cliente"
+          },
+          {
+            "nombre": "segmento",
+            "tipo": "STRING",
+            "descripcion": "Segmento de negocio del cliente (homologado)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "c.segmento"
+          },
+          {
+            "nombre": "nombre_provincia",
+            "tipo": "STRING",
+            "descripcion": "Provincia de residencia del cliente (homologada)",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "c.nombre_provincia"
+          },
+          {
+            "nombre": "cant_cuentas",
+            "tipo": "INT",
+            "descripcion": "Cantidad de cuentas/productos activos del cliente",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "COUNT(p.num_cuenta) AS cant_cuentas"
+          },
+          {
+            "nombre": "saldo_total",
+            "tipo": "DECIMAL(18,2)",
+            "descripcion": "Suma de saldos de todas las cuentas del cliente",
+            "sensibilidad_pii": "financiero",
+            "regla_transformacion": "SUM(p.saldo) AS saldo_total"
+          },
+          {
+            "nombre": "saldo_promedio",
+            "tipo": "DECIMAL(18,2)",
+            "descripcion": "Saldo promedio por cuenta del cliente",
+            "sensibilidad_pii": "financiero",
+            "regla_transformacion": "AVG(p.saldo) AS saldo_promedio"
+          },
+          {
+            "nombre": "fecha_vinculacion",
+            "tipo": "DATE",
+            "descripcion": "Fecha de primera vinculación del cliente (se conserva como referencia de negocio)",
+            "sensibilidad_pii": "identificador",
+            "regla_transformacion": "c.fecha_vinculacion"
+          }
+        ],
+        "expectations": [
+          {
+            "nombre": "exp_cod_cliente_no_nulo",
+            "expresion": "cod_cliente IS NOT NULL",
+            "accion": "FAIL"
+          },
+          {
+            "nombre": "exp_cant_cuentas_no_negativo",
+            "expresion": "cant_cuentas >= 0",
+            "accion": "WARN"
+          },
+          {
+            "nombre": "exp_saldo_total_no_negativo",
+            "expresion": "saldo_total >= 0",
+            "accion": "WARN"
+          }
+        ],
+        "kpis": [],
+        "sql": "SELECT\n  c.cod_cliente,\n  c.segmento,\n  c.nombre_provincia,\n  COUNT(p.num_cuenta) AS cant_cuentas,\n  SUM(p.saldo) AS saldo_total,\n  AVG(p.saldo) AS saldo_promedio,\n  c.fecha_vinculacion\nFROM workspace.clientes_pn_silver.clientes_pn_historico AS c\nLEFT JOIN workspace.clientes_pn_silver.cuentas_pn AS p\n  ON c.cod_cliente = p.cod_cliente\nWHERE c.__END_AT IS NULL  -- cliente vigente\n  AND p.estado = 'ACTIVO'  -- solo cuentas activas\nGROUP BY c.cod_cliente, c.segmento, c.nombre_provincia, c.fecha_vinculacion"
+      },
+      {
+        "nombre": "workspace.clientes_pn_gold.kpi_segmento_provincia",
+        "descripcion": "KPIs de negocio por segmento y provincia: número de clientes, saldo total y saldo promedio.",
+        "grano": "segmento + provincia",
+        "clave_negocio": [
+          "segmento",
+          "nombre_provincia"
+        ],
+        "patron_carga": "VISTA_MATERIALIZADA",
+        "origenes": [
+          "workspace.clientes_pn_gold.cliente_360"
+        ],
+        "columnas": [
+          {
+            "nombre": "segmento",
+            "tipo": "STRING",
+            "descripcion": "Segmento de negocio",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "c.segmento"
+          },
+          {
+            "nombre": "nombre_provincia",
+            "tipo": "STRING",
+            "descripcion": "Provincia",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "c.nombre_provincia"
+          },
+          {
+            "nombre": "num_clientes",
+            "tipo": "INT",
+            "descripcion": "Cantidad de clientes únicos en el segmento y provincia",
+            "sensibilidad_pii": "ninguna",
+            "regla_transformacion": "COUNT(DISTINCT c.cod_cliente) AS num_clientes"
+          },
+          {
+            "nombre": "saldo_total",
+            "tipo": "DECIMAL(18,2)",
+            "descripcion": "Suma total de saldos de los clientes del segmento y provincia",
+            "sensibilidad_pii": "financiero",
+            "regla_transformacion": "SUM(c.saldo_total) AS saldo_total"
+          },
+          {
+            "nombre": "saldo_promedio",
+            "tipo": "DECIMAL(18,2)",
+            "descripcion": "Saldo promedio por cliente en el segmento y provincia",
+            "sensibilidad_pii": "financiero",
+            "regla_transformacion": "AVG(c.saldo_total) AS saldo_promedio"
+          }
+        ],
+        "expectations": [
+          {
+            "nombre": "exp_num_clientes_no_nulo",
+            "expresion": "num_clientes IS NOT NULL",
+            "accion": "FAIL"
+          },
+          {
+            "nombre": "exp_saldo_total_no_negativo",
+            "expresion": "saldo_total >= 0",
+            "accion": "WARN"
+          }
+        ],
+        "kpis": [
+          {
+            "nombre": "kpi_num_clientes",
+            "formula": "num_clientes"
+          },
+          {
+            "nombre": "kpi_saldo_total",
+            "formula": "saldo_total"
+          },
+          {
+            "nombre": "kpi_saldo_promedio",
+            "formula": "saldo_promedio"
+          }
+        ],
+        "sql": "SELECT\n  c.segmento,\n  c.nombre_provincia,\n  COUNT(DISTINCT c.cod_cliente) AS num_clientes,\n  SUM(c.saldo_total) AS saldo_total,\n  AVG(c.saldo_total) AS saldo_promedio\nFROM workspace.clientes_pn_gold.cliente_360 AS c\nGROUP BY c.segmento, c.nombre_provincia"
+      }
+    ]
+  },
+  "score": {
+    "conforme": true,
+    "hallazgos": []
+  },
+  "reintentos": 0,
+  "hash": "70e4a3002610c4b9"
+}

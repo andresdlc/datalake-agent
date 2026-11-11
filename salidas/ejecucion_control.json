@@ -1,0 +1,175 @@
+{
+  "cleanup_duration": 0,
+  "creator_user_name": "delacuadra.andres@gmail.com",
+  "effective_performance_target": "PERFORMANCE_OPTIMIZED",
+  "end_time": 1794350204172,
+  "execution_duration": 0,
+  "job_id": 905977156437031,
+  "job_run_id": 273618613864018,
+  "number_in_job": 273618613864018,
+  "original_attempt_run_id": 273618613864018,
+  "run_duration": 64009,
+  "run_id": 273618613864018,
+  "run_name": "piloto_ia_clientes_pn_orquestacion",
+  "run_page_url": "https://dbc-bac46b6c-ee71.cloud.databricks.com/?o=7474652963421685#job/905977156437031/run/273618613864018",
+  "run_type": "JOB_RUN",
+  "setup_duration": 0,
+  "start_time": 1794350140163,
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "status": {
+    "state": "TERMINATED",
+    "termination_details": {
+      "code": "SUCCESS",
+      "message": "",
+      "type": "SUCCESS"
+    }
+  },
+  "tasks": [
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "agente_modelado"
+        }
+      ],
+      "effective_performance_target": "PERFORMANCE_OPTIMIZED",
+      "end_time": 1794350140198,
+      "execution_duration": 0,
+      "pipeline_task": {
+        "pipeline_id": "f2a174f1-4360-4aa4-bf90-6922581776d1"
+      },
+      "run_id": 1052432439954608,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://dbc-bac46b6c-ee71.cloud.databricks.com/?o=7474652963421685#job/905977156437031/run/1052432439954608",
+      "setup_duration": 0,
+      "start_time": 1794350140198,
+      "state": {
+        "life_cycle_state": "SKIPPED",
+        "result_state": "DISABLED",
+        "state_message": "This task was not selected in the partial run.",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "DISABLED",
+          "message": "This task was not selected in the partial run.",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "silver_clientes_pn"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "silver_clientes_pn"
+        }
+      ],
+      "effective_performance_target": "PERFORMANCE_OPTIMIZED",
+      "end_time": 1794350140199,
+      "execution_duration": 0,
+      "pipeline_task": {
+        "pipeline_id": "5443dbf9-819d-420c-9461-3c54a7e813ec"
+      },
+      "run_id": 868405744947243,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://dbc-bac46b6c-ee71.cloud.databricks.com/?o=7474652963421685#job/905977156437031/run/868405744947243",
+      "setup_duration": 0,
+      "start_time": 1794350140199,
+      "state": {
+        "life_cycle_state": "SKIPPED",
+        "result_state": "DISABLED",
+        "state_message": "This task was not selected in the partial run.",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "DISABLED",
+          "message": "This task was not selected in the partial run.",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "gold_clientes_pn"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "effective_performance_target": "PERFORMANCE_OPTIMIZED",
+      "end_time": 1794350140196,
+      "execution_duration": 0,
+      "notebook_task": {
+        "base_parameters": {
+          "modelo": "databricks-gpt-oss-120b"
+        },
+        "notebook_path": "/Workspace/Users/delacuadra.andres@gmail.com/piloto_ia_silver_gold/notebooks/01_agente_modelado",
+        "source": "WORKSPACE"
+      },
+      "run_id": 534024624656454,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://dbc-bac46b6c-ee71.cloud.databricks.com/?o=7474652963421685#job/905977156437031/run/534024624656454",
+      "setup_duration": 0,
+      "start_time": 1794350140196,
+      "state": {
+        "life_cycle_state": "SKIPPED",
+        "result_state": "DISABLED",
+        "state_message": "This task was not selected in the partial run.",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "DISABLED",
+          "message": "This task was not selected in the partial run.",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "agente_modelado"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "gold_clientes_pn"
+        }
+      ],
+      "effective_performance_target": "PERFORMANCE_OPTIMIZED",
+      "end_time": 1794350203762,
+      "execution_duration": 59000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/delacuadra.andres@gmail.com/piloto_ia_silver_gold/notebooks/02_control_origen_capas",
+        "source": "WORKSPACE"
+      },
+      "run_id": 205845923402342,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://dbc-bac46b6c-ee71.cloud.databricks.com/?o=7474652963421685#job/905977156437031/run/205845923402342",
+      "setup_duration": 4000,
+      "start_time": 1794350140200,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "control_origen_capas"
+    }
+  ],
+  "trigger": "ONE_TIME"
+}

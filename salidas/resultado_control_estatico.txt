@@ -1,0 +1,9 @@
+PASS | codigo | silver | src/silver/clientes_pn/silver_clientes_pn.py | sin hallazgos
+PASS | codigo | gold | src/gold/clientes_pn/gold_clientes_pn.sql | sin hallazgos
+PASS | caso_negativo | gold | tests/casos/gold_lee_bronce.sql | gold lee bronce.clientes_pn_snapshot (se esperaba violación)
+PASS | caso_negativo | gold | tests/casos/gold_lee_referencia.sql | gold lee referencia.provincias (se esperaba violación)
+PASS | caso_negativo | silver | tests/casos/silver_lee_gold.sql | silver lee clientes_pn_gold.cliente_360 (se esperaba violación)
+PASS | caso_negativo | silver | tests/casos/silver_lee_ruta.sql | lectura directa de fuente o ruta (se esperaba violación)
+PASS | propuesta_agente | gold | 20261110T220949-7eaff2-gold | sin hallazgos
+PASS | propuesta_agente | silver | 20261110T220949-7eaff2-silver | sin hallazgos
+RESULTADO CONTROL ESTÁTICO: CONFORME
