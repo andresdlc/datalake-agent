@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-11-12T19:31:00.000Z" agent="Grok Bot" version="22.1.16" type="device" pages="5">
+  <diagram id="n1-contexto" name="Nivel 1 Contexto">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1880" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n1-contexto-title" parent="1" vertex="1" value="C4 — Nivel 1: Contexto del sistema&lt;br/&gt;&lt;font style='font-size:12px;font-weight:normal'&gt;Generación con IA de modelos Silver y Gold en Azure Databricks  ·  v4.1  ·  12-nov-2026&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;spacing=0;">
+          <mxGeometry as="geometry" x="20" y="12" width="1840" height="56"/>
+        </mxCell>
+        <mxCell id="n1-contexto-footer" parent="1" vertex="1" value="Versión 4.1  ·  12-nov-2026  ·  America/Guayaquil  ·  Arquitectura objetivo en Azure Databricks  ·  El banco no se nombra" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#555555;">
+          <mxGeometry as="geometry" x="20" y="1272" width="1840" height="18"/>
+        </mxCell>
+        <mxCell id="p-arq" parent="1" vertex="1" value="&lt;b&gt;Arquitecto de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Revisa el estándar, el contrato y el primer PR de un dominio.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="40" y="80" width="200" height="150"/>
+        </mxCell>
+        <mxCell id="p-steward" parent="1" vertex="1" value="&lt;b&gt;Data steward&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Valida calidad, clasificación y nomenclatura.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="258" y="80" width="200" height="150"/>
+        </mxCell>
+        <mxCell id="p-dueno" parent="1" vertex="1" value="&lt;b&gt;Dueño de negocio del dominio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Valida la semántica Gold. Aún no está nominado.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="476" y="80" width="200" height="150"/>
+        </mxCell>
+        <mxCell id="p-ing" parent="1" vertex="1" value="&lt;b&gt;Ingeniero de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Solicita la generación y hace la primera ejecución manual en dev.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="694" y="80" width="200" height="150"/>
+        </mxCell>
+        <mxCell id="p-ops" parent="1" vertex="1" value="&lt;b&gt;Operación de plataforma&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Aprueba, con el dueño, la primera carga en prd.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="912" y="80" width="200" height="150"/>
+        </mxCell>
+        <mxCell id="p-cons" parent="1" vertex="1" value="&lt;b&gt;Consumidor analítico&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Consulta productos Gold. El canal Genie analítico queda fuera de alcance.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="40" y="780" width="250" height="150"/>
+        </mxCell>
+        <mxCell id="s-plat" parent="1" vertex="1" value="&lt;b&gt;Plataforma de modelado IA Silver y Gold&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema de software]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Azure Databricks. El agente propone artefactos alineados al estándar del datalake.&lt;br/&gt;No publica, no fusiona y no lanza jobs. Alcance: solo el modelado de Silver y Gold.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#1168BD;strokeColor=#0B4884;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="560" y="400" width="520" height="200"/>
+        </mxCell>
+        <mxCell id="x-src" parent="1" vertex="1" value="&lt;b&gt;Sistemas de origen&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Core y demás orígenes del banco. Ya existen.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="320" width="250" height="100"/>
+        </mxCell>
+        <mxCell id="x-adf" parent="1" vertex="1" value="&lt;b&gt;Azure Data Factory y framework SQL&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Ingesta ya existente. Fuera del alcance de la IA.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="460" width="250" height="120"/>
+        </mxCell>
+        <mxCell id="x-gh" parent="1" vertex="1" value="&lt;b&gt;GitHub&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Repositorio único del datalake. Única vía formal de cambio y aprobación.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1420" y="280" width="420" height="110"/>
+        </mxCell>
+        <mxCell id="x-fm" parent="1" vertex="1" value="&lt;b&gt;Foundation models hospedados por Databricks&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Inferencia en infraestructura administrada por Databricks, no necesariamente en la suscripción del banco.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1420" y="420" width="420" height="120"/>
+        </mxCell>
+        <mxCell id="x-entra" parent="1" vertex="1" value="&lt;b&gt;Microsoft Entra ID&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Un solo tenant. Identidad corporativa y grupos del dominio.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1420" y="560" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-kv" parent="1" vertex="1" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Secretos del estándar: scope kv-dl-&amp;lt;amb&amp;gt;.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1420" y="670" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-mon" parent="1" vertex="1" value="&lt;b&gt;Azure Monitor y Log Analytics&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Auditoría, telemetría y observabilidad.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1420" y="780" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="n1-contexto-e1" parent="1" edge="1" source="p-arq" target="s-plat" value="Revisa y aprueba propuestas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[primer PR del dominio]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="140" y="300"/>
+              <mxPoint x="650" y="300"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e2" parent="1" edge="1" source="p-steward" target="s-plat" value="Valida calidad y contrato" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="358" y="320"/>
+              <mxPoint x="750" y="320"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e3" parent="1" edge="1" source="p-dueno" target="s-plat" value="Valida semántica Gold&lt;br/&gt;&lt;font style='font-size:8px'&gt;[cuando esté nominado]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="576" y="340"/>
+              <mxPoint x="820" y="340"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e4" parent="1" edge="1" source="p-ing" target="s-plat" value="Solicita generación&lt;br/&gt;&lt;font style='font-size:8px'&gt;[primera ejecución manual en dev]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="794" y="360"/>
+              <mxPoint x="900" y="360"/>
+            </Array>
+            <mxPoint as="offset" x="90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e5" parent="1" edge="1" source="p-ops" target="s-plat" value="Aprueba la primera carga en prd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1012" y="380"/>
+              <mxPoint x="1012" y="380"/>
+            </Array>
+            <mxPoint as="offset" x="110" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e6" parent="1" edge="1" source="p-cons" target="s-plat" value="Lee productos Gold&lt;br/&gt;&lt;font style='font-size:8px'&gt;[consulta; no Genie analítico]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="320" y="855"/>
+              <mxPoint x="320" y="560"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e7" parent="1" edge="1" source="x-src" target="x-adf" value="Extracción ya existente&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera de alcance IA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e8" parent="1" edge="1" source="x-adf" target="s-plat" value="Entrega Landing y Bronze&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera de alcance IA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e9" parent="1" edge="1" source="s-plat" target="x-gh" value="PR y CI/CD; no autopromoción&lt;br/&gt;&lt;font style='font-size:8px'&gt;[GitHub Actions, DABs, OIDC]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1240" y="450"/>
+              <mxPoint x="1240" y="335"/>
+            </Array>
+            <mxPoint as="offset" x="-10" y="-22"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e10" parent="1" edge="1" source="s-plat" target="x-fm" value="Inferencia gobernada&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Unity Gateway, Model Serving]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1200" y="500"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e11" parent="1" edge="1" source="s-plat" target="x-entra" value="Autenticación y grupos&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Entra ID, un solo tenant]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1240" y="540"/>
+              <mxPoint x="1240" y="605"/>
+            </Array>
+            <mxPoint as="offset" x="-10" y="18"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e12" parent="1" edge="1" source="s-plat" target="x-kv" value="Lee secretos de plataforma&lt;br/&gt;&lt;font style='font-size:8px'&gt;[kv-dl-&amp;lt;amb&amp;gt;]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1280" y="580"/>
+              <mxPoint x="1280" y="715"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="40"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-contexto-e13" parent="1" edge="1" source="s-plat" target="x-mon" value="Auditoría y observabilidad&lt;br/&gt;&lt;font style='font-size:8px'&gt;[UC audit, event log, Log Analytics]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1160" y="590"/>
+              <mxPoint x="1160" y="825"/>
+            </Array>
+            <mxPoint as="offset" x="30" y="80"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n1-alcance" parent="1" vertex="1" value="Alcance de la IA: únicamente el modelado de Silver y Gold.&lt;br/&gt;El agente es un acelerador de diseño, no un publicador." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#E8F1FB;strokeColor=#2E6295;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="560" y="640" width="520" height="70"/>
+        </mxCell>
+        <mxCell id="n1-contexto-legend" parent="1" vertex="1" value="&lt;b&gt;Leyenda C4&lt;/b&gt;&lt;br/&gt;Persona&lt;br/&gt;Sistema de software&lt;br/&gt;Sistema o contenedor externo&lt;br/&gt;Relación (etiqueta + tecnología)&lt;br/&gt;Relación opcional o de rechazo (discontinua)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F6F8;strokeColor=#C5CDD6;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1040" width="400" height="220"/>
+        </mxCell>
+        <mxCell id="n1-contexto-assumptions" parent="1" vertex="1" value="&lt;b&gt;Supuestos y límites&lt;/b&gt;&lt;br/&gt;• El diagrama describe la arquitectura objetivo en Azure Databricks, no un workspace de prueba.&lt;br/&gt;• La organización de catálogos (uno por capa y ambiente) adopta el estándar institucional y debe ratificarla arquitectura de datos.&lt;br/&gt;• El dueño de negocio del dominio piloto (clientes personas naturales) aún no está nominado; sin ese rol la validación de Gold no se considera completa.&lt;br/&gt;• El glosario de negocio del dominio no existe aún y es un entregable del piloto. Los estándares técnicos de nombrado y modelado sí existen y no se reescriben.&lt;br/&gt;• El modelo de lenguaje concreto y su disponibilidad en la región de Azure del banco están pendientes. Azure OpenAI no forma parte de este diseño.&lt;br/&gt;• No hay workspace de QA: los catálogos qa_* viven en el workspace de desarrollo; los prd_*, en el de producción.&lt;br/&gt;• La ubicación del piloto (parte del dominio transversal u otra) debe validarla arquitectura de datos.&lt;br/&gt;• Un inventario formal de riesgo de modelo y un canal Genie para consumo analítico quedan fuera de alcance.&lt;br/&gt;• Landing, Bronze, el framework SQL de ingesta y Azure Data Factory ya existen y quedan fuera del alcance de la IA." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="460" y="1040" width="1380" height="220"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n2-contenedores" name="Nivel 2 Contenedores">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2240" pageHeight="1640" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n2-contenedores-title" parent="1" vertex="1" value="C4 — Nivel 2: Contenedores&lt;br/&gt;&lt;font style='font-size:12px;font-weight:normal'&gt;Dos ciclos distintos: desarrollo (el agente propone) y operación (el job del dominio carga).  ·  v4.1  ·  12-nov-2026&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;spacing=0;">
+          <mxGeometry as="geometry" x="20" y="12" width="2200" height="56"/>
+        </mxCell>
+        <mxCell id="n2-contenedores-footer" parent="1" vertex="1" value="Versión 4.1  ·  12-nov-2026  ·  America/Guayaquil  ·  Arquitectura objetivo en Azure Databricks  ·  El banco no se nombra" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#555555;">
+          <mxGeometry as="geometry" x="20" y="1612" width="2200" height="18"/>
+        </mxCell>
+        <mxCell id="b-adb" parent="1" vertex="1" value="&lt;b&gt;Azure Databricks&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema de software — plataforma objetivo]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="20" y="300" width="1740" height="1060"/>
+        </mxCell>
+        <mxCell id="b-dev" parent="1" vertex="1" value="&lt;b&gt;Ciclo de desarrollo&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Aporte de esta propuesta — el agente no despliega ni lanza jobs]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="40" y="340" width="1700" height="400"/>
+        </mxCell>
+        <mxCell id="b-ops" parent="1" vertex="1" value="&lt;b&gt;Ciclo de operación&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Job de dominio de la referencia, precisado en v4.1 para la primera carga]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="40" y="770" width="1700" height="380"/>
+        </mxCell>
+        <mxCell id="p-arq" parent="1" vertex="1" value="&lt;b&gt;Arquitecto de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Revisión y primer PR.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="40" y="80" width="180" height="140"/>
+        </mxCell>
+        <mxCell id="p-steward" parent="1" vertex="1" value="&lt;b&gt;Data steward&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Calidad y contrato.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="236" y="80" width="180" height="140"/>
+        </mxCell>
+        <mxCell id="p-dueno" parent="1" vertex="1" value="&lt;b&gt;Dueño de negocio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Semántica Gold.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="432" y="80" width="180" height="140"/>
+        </mxCell>
+        <mxCell id="p-ing" parent="1" vertex="1" value="&lt;b&gt;Ingeniero de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Generación y dev.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="628" y="80" width="180" height="140"/>
+        </mxCell>
+        <mxCell id="p-ops" parent="1" vertex="1" value="&lt;b&gt;Operación&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Primera carga en prd.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="824" y="80" width="180" height="140"/>
+        </mxCell>
+        <mxCell id="c-apps" parent="1" vertex="1" value="&lt;b&gt;Databricks Apps&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: interfaz opcional]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Chat de asistencia. No despliega, no aprueba y no lanza jobs.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="60" y="415" width="220" height="130"/>
+        </mxCell>
+        <mxCell id="c-genie" parent="1" vertex="1" value="&lt;b&gt;Genie Code&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: asistente del ingeniero]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Ayuda a leer el diff. No sustituye la PR ni la aprobación.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="60" y="590" width="220" height="130"/>
+        </mxCell>
+        <mxCell id="c-agente" parent="1" vertex="1" value="&lt;b&gt;Agente de modelado&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Agent Bricks / Agent Runtime]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Propone contrato JSON, DDL, Lakeflow y expectations. Modos crear y actualizar. No fusiona, no escribe en Bronze y no lanza el job.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="320" y="455" width="280" height="200"/>
+        </mxCell>
+        <mxCell id="c-mcp" parent="1" vertex="1" value="&lt;b&gt;MCP gobernado&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Funciones UC y contexto de negocio, con health check y configuración por ambiente.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="640" y="415" width="240" height="130"/>
+        </mxCell>
+        <mxCell id="c-gw" parent="1" vertex="1" value="&lt;b&gt;Unity Gateway y Model Serving&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Acceso gobernado a foundation models hospedados por Databricks.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="640" y="590" width="240" height="130"/>
+        </mxCell>
+        <mxCell id="c-prof" parent="1" vertex="1" value="&lt;b&gt;Data profiling&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Estadísticas, deriva y frescura. Alimenta el paquete de contexto.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="920" y="415" width="240" height="130"/>
+        </mxCell>
+        <mxCell id="c-mlflow" parent="1" vertex="1" value="&lt;b&gt;MLflow 3&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;evaluate y tracing. Set de evaluación propio del dominio.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="920" y="590" width="240" height="130"/>
+        </mxCell>
+        <mxCell id="c-reg" parent="1" vertex="1" value="&lt;b&gt;Registro y bitácora&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: catálogo de control]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Estados BORRADOR, EN_REVISION, REQUIERE_CAMBIOS y APROBADA. Bitácora de tokens y usuario.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1200" y="455" width="300" height="200"/>
+        </mxCell>
+        <mxCell id="c-land" parent="1" vertex="1" value="&lt;b&gt;Landing&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor existente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Archivos inmutables. Fuera del alcance de la IA.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="60" y="830" width="190" height="120"/>
+        </mxCell>
+        <mxCell id="c-brz" parent="1" vertex="1" value="&lt;b&gt;Bronze&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor existente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Un pipeline por origen, solo append. La IA no escribe aquí.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="280" y="830" width="200" height="120"/>
+        </mxCell>
+        <mxCell id="c-job" parent="1" vertex="1" value="&lt;b&gt;Job pl_dom_&amp;lt;dominio&amp;gt;&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Job de Databricks]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Orquesta el dominio. Serverless. El agente no forma parte de este job.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="510" y="820" width="250" height="140"/>
+        </mxCell>
+        <mxCell id="c-slv" parent="1" vertex="1" value="&lt;b&gt;Pipeline Silver&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Lakeflow]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;pl_dom_&amp;lt;dominio&amp;gt;_slv. AUTO CDC o FROM SNAPSHOT, SCD1/SCD2, expectations.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="790" y="820" width="250" height="140"/>
+        </mxCell>
+        <mxCell id="c-qc" parent="1" vertex="1" value="&lt;b&gt;Tareas de plataforma&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;control_calidad (2 %), aplicar_metadatos y registrar_ejecucion.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1070" y="820" width="250" height="140"/>
+        </mxCell>
+        <mxCell id="c-gld" parent="1" vertex="1" value="&lt;b&gt;Pipeline Gold&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Lakeflow]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;pl_dom_&amp;lt;dominio&amp;gt;_gld. MVs dim_, fct_, agg_ o dp_. Solo si pasa la calidad.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1350" y="820" width="260" height="140"/>
+        </mxCell>
+        <mxCell id="c-uc" parent="1" vertex="1" value="&lt;b&gt;Unity Catalog&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor de gobierno]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Un catálogo por capa y ambiente (pendiente de ratificación): &amp;lt;amb&amp;gt;_landing, &amp;lt;amb&amp;gt;_bronze, &amp;lt;amb&amp;gt;_silver, &amp;lt;amb&amp;gt;_gold, &amp;lt;amb&amp;gt;_control. Linaje, ABAC, máscaras y etiquetas gobernadas (dominio, capa, sistema_origen, dueno, sensibilidad). Grupos grp_dl_&amp;lt;dominio&amp;gt;_{own,dev,lec} y dueño sp_dl_&amp;lt;amb&amp;gt;.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="60" y="1160" width="1660" height="120"/>
+        </mxCell>
+        <mxCell id="x-src" parent="1" vertex="1" value="&lt;b&gt;Sistemas de origen&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Fuera del alcance de la IA.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="300" width="400" height="80"/>
+        </mxCell>
+        <mxCell id="x-adf" parent="1" vertex="1" value="&lt;b&gt;Azure Data Factory y framework SQL&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Ingesta ya existente.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="400" width="400" height="90"/>
+        </mxCell>
+        <mxCell id="x-gh" parent="1" vertex="1" value="&lt;b&gt;GitHub y GitHub Actions&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Repositorio del datalake. DABs con targets dev, qa y prd. OIDC. PR a main despliega QA; prd exige tag y aprobación del dueño.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="510" width="400" height="150"/>
+        </mxCell>
+        <mxCell id="x-fm" parent="1" vertex="1" value="&lt;b&gt;Foundation models hospedados por Databricks&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Inferencia gobernada; no es Azure OpenAI.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="680" width="400" height="100"/>
+        </mxCell>
+        <mxCell id="x-entra" parent="1" vertex="1" value="&lt;b&gt;Microsoft Entra ID&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Un solo tenant.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="800" width="400" height="80"/>
+        </mxCell>
+        <mxCell id="x-kv" parent="1" vertex="1" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Scopes kv-dl-&amp;lt;amb&amp;gt;.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="900" width="400" height="80"/>
+        </mxCell>
+        <mxCell id="x-mon" parent="1" vertex="1" value="&lt;b&gt;Azure Monitor / Log Analytics&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Observabilidad y auditoría.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1810" y="1000" width="400" height="80"/>
+        </mxCell>
+        <mxCell id="n2-contenedores-e1" parent="1" edge="1" source="p-ing" target="c-agente" value="Solicita una propuesta&lt;br/&gt;&lt;font style='font-size:8px'&gt;[crear o actualizar]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="718" y="250"/>
+              <mxPoint x="460" y="250"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e2" parent="1" edge="1" source="p-ing" target="c-apps" value="Usa la interfaz, si existe&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Databricks Apps]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="718" y="270"/>
+              <mxPoint x="170" y="270"/>
+            </Array>
+            <mxPoint as="offset" x="-110" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e3" parent="1" edge="1" source="p-arq" target="c-reg" value="Deja APROBADA o REQUIERE_CAMBIOS&lt;br/&gt;&lt;font style='font-size:8px'&gt;[revisión humana, no el chat]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="130" y="240"/>
+              <mxPoint x="1350" y="240"/>
+            </Array>
+            <mxPoint as="offset" x="220" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e4" parent="1" edge="1" source="p-steward" target="c-reg" value="Valida calidad y contrato" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="326" y="260"/>
+              <mxPoint x="1350" y="260"/>
+            </Array>
+            <mxPoint as="offset" x="200" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e5" parent="1" edge="1" source="c-apps" target="c-agente" value="Asiste; no aprueba" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e6" parent="1" edge="1" source="c-genie" target="c-agente" value="Ayuda a leer el diff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e7" parent="1" edge="1" source="c-agente" target="c-mcp" value="Consulta tras health check&lt;br/&gt;&lt;font style='font-size:8px'&gt;[MCP]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="460" y="480"/>
+              <mxPoint x="620" y="480"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e8" parent="1" edge="1" source="c-agente" target="c-gw" value="Invoca el modelo&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Unity Gateway, Model Serving]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e9" parent="1" edge="1" source="c-prof" target="c-agente" value="Stats agregados, sin PII&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Data profiling]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1040" y="395"/>
+              <mxPoint x="460" y="395"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e10" parent="1" edge="1" source="c-agente" target="c-mlflow" value="Evalúa y traza&lt;br/&gt;&lt;font style='font-size:8px'&gt;[MLflow 3]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="620" y="655"/>
+              <mxPoint x="900" y="655"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e11" parent="1" edge="1" source="c-agente" target="c-reg" value="Registra versión y tokens&lt;br/&gt;&lt;font style='font-size:8px'&gt;[catálogo de control]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="620" y="555"/>
+              <mxPoint x="1180" y="555"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e12" parent="1" edge="1" source="c-reg" target="x-gh" value="PR solo si APROBADA&lt;br/&gt;&lt;font style='font-size:8px'&gt;[dominios/&amp;lt;dominio&amp;gt;/]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="530"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e13" parent="1" edge="1" source="c-gw" target="x-fm" value="Inferencia gobernada&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Model Serving]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="625"/>
+              <mxPoint x="1780" y="730"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e14" parent="1" edge="1" source="x-src" target="x-adf" value="Extracción&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera de alcance IA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e15" parent="1" edge="1" source="x-adf" target="c-land" value="Carga inmutable&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera de alcance IA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="445"/>
+              <mxPoint x="1780" y="800"/>
+              <mxPoint x="155" y="800"/>
+            </Array>
+            <mxPoint as="offset" x="-120" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e16" parent="1" edge="1" source="c-land" target="c-brz" value="Ingesta ya existente&lt;br/&gt;&lt;font style='font-size:8px'&gt;[solo append]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e17" parent="1" edge="1" source="c-brz" target="c-job" value="Dispara el job&lt;br/&gt;&lt;font style='font-size:8px'&gt;[table trigger o horario diario]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e18" parent="1" edge="1" source="c-job" target="c-slv" value="1. Corre Silver&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Lakeflow serverless]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e19" parent="1" edge="1" source="c-slv" target="c-qc" value="2. control_calidad&lt;br/&gt;&lt;font style='font-size:8px'&gt;[umbral de cuarentena 2 %]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e20" parent="1" edge="1" source="c-qc" target="c-gld" value="3. Gold solo si pasa&lt;br/&gt;&lt;font style='font-size:8px'&gt;[materialized views]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e21" parent="1" edge="1" source="c-slv" target="c-uc" value="Crea o refresca streaming tables&lt;br/&gt;&lt;font style='font-size:8px'&gt;[la 1.ª ejecución materializa el objeto]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="915" y="1120"/>
+              <mxPoint x="500" y="1120"/>
+            </Array>
+            <mxPoint as="offset" x="-40" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e22" parent="1" edge="1" source="c-gld" target="c-uc" value="Crea o refresca materialized views&lt;br/&gt;&lt;font style='font-size:8px'&gt;[lee solo Silver]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1480" y="1120"/>
+              <mxPoint x="1500" y="1120"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e23" parent="1" edge="1" source="c-qc" target="c-uc" value="Registra ejecución y conciliación&lt;br/&gt;&lt;font style='font-size:8px'&gt;[&amp;lt;amb&amp;gt;_control]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1195" y="1120"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e24" parent="1" edge="1" source="c-agente" target="c-uc" value="Lee metadatos y linaje&lt;br/&gt;&lt;font style='font-size:8px'&gt;[SQL parametrizado, service principal]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="450" y="750"/>
+              <mxPoint x="180" y="750"/>
+              <mxPoint x="180" y="1140"/>
+            </Array>
+            <mxPoint as="offset" x="70" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e25" parent="1" edge="1" source="x-gh" target="c-job" value="bundle deploy (no carga datos)&lt;br/&gt;&lt;font style='font-size:8px'&gt;[DABs, GitHub Actions, OIDC]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2010" y="760"/>
+              <mxPoint x="1780" y="760"/>
+              <mxPoint x="1780" y="1020"/>
+              <mxPoint x="635" y="1020"/>
+            </Array>
+            <mxPoint as="offset" x="-20" y="18"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e26" parent="1" edge="1" source="c-job" target="x-entra" value="Se autentica con el SP del ambiente&lt;br/&gt;&lt;font style='font-size:8px'&gt;[sp_dl_&amp;lt;amb&amp;gt;]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="635" y="1005"/>
+              <mxPoint x="1780" y="1005"/>
+              <mxPoint x="1780" y="840"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e27" parent="1" edge="1" source="x-kv" target="c-uc" value="Aporta secretos al scope&lt;br/&gt;&lt;font style='font-size:8px'&gt;[kv-dl-&amp;lt;amb&amp;gt;]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="940"/>
+              <mxPoint x="1720" y="940"/>
+              <mxPoint x="1720" y="1220"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-contenedores-e28" parent="1" edge="1" source="c-uc" target="x-mon" value="Auditoría y event logs&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Unity Catalog, Lakeflow]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="1220"/>
+              <mxPoint x="1780" y="1080"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n2-sep" parent="1" vertex="1" value="Separación de ciclos: las observaciones relanzan solo la generación de la propuesta, nunca el job operativo ni un full refresh." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#E8F1FB;strokeColor=#2E6295;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="1200" y="660" width="500" height="70"/>
+        </mxCell>
+        <mxCell id="n2-contenedores-legend" parent="1" vertex="1" value="&lt;b&gt;Leyenda C4&lt;/b&gt;&lt;br/&gt;Persona&lt;br/&gt;Contenedor&lt;br/&gt;Sistema o contenedor externo&lt;br/&gt;Relación (etiqueta + tecnología)&lt;br/&gt;Relación opcional o de rechazo (discontinua)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F6F8;strokeColor=#C5CDD6;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1400" width="400" height="200"/>
+        </mxCell>
+        <mxCell id="n2-contenedores-assumptions" parent="1" vertex="1" value="&lt;b&gt;Supuestos y límites&lt;/b&gt;&lt;br/&gt;• Mezclar el ciclo de desarrollo con el de operación contradiría el estándar de orquestación: el agente no forma parte del job y no tiene herramientas para lanzarlo.&lt;br/&gt;• Databricks Apps, si se habilita, entra solo al ciclo de generación y revisión: no despliega, no aprueba y no lanza jobs.&lt;br/&gt;• bundle deploy crea o actualiza el pipeline y el job, pero no carga datos. La primera ejecución autorizada crea los objetos en Unity Catalog y hace el backfill.&lt;br/&gt;• Los catálogos dev_* y qa_* se vinculan al workspace de desarrollo; los prd_*, al de producción (pendiente de ratificación).&lt;br/&gt;• Varias capacidades citadas (etiquetas que se propagan por linaje, Production monitoring de GenAI) pueden seguir en Beta y hay que confirmarlas en el workspace de Azure del banco.&lt;br/&gt;• La autenticación de GitHub Actions hacia Databricks se representa con OIDC, patrón habitual con DABs; la v4.1 cita Actions y DABs y no detalla el mecanismo de federación." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="460" y="1400" width="1740" height="200"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n3-agente" name="Nivel 3 Componentes del agente de modelado">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2240" pageHeight="1660" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n3-agente-title" parent="1" vertex="1" value="C4 — Nivel 3: Componentes del agente de modelado&lt;br/&gt;&lt;font style='font-size:12px;font-weight:normal'&gt;Ciclo de desarrollo. El agente propone; un humano aprueba; solo la versión APROBADA abre la PR.  ·  v4.1  ·  12-nov-2026&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;spacing=0;">
+          <mxGeometry as="geometry" x="20" y="12" width="2200" height="56"/>
+        </mxCell>
+        <mxCell id="n3-agente-footer" parent="1" vertex="1" value="Versión 4.1  ·  12-nov-2026  ·  America/Guayaquil  ·  Arquitectura objetivo en Azure Databricks  ·  El banco no se nombra" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#555555;">
+          <mxGeometry as="geometry" x="20" y="1632" width="2200" height="18"/>
+        </mxCell>
+        <mxCell id="b-ag" parent="1" vertex="1" value="&lt;b&gt;Agente de modelado&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor — Agent Bricks / Agent Runtime]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="500" y="250" width="1210" height="880"/>
+        </mxCell>
+        <mxCell id="x-apps" parent="1" vertex="1" value="&lt;b&gt;Databricks Apps&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor opcional]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Interfaz de asistencia. No aprueba.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="80" width="230" height="100"/>
+        </mxCell>
+        <mxCell id="p-ing" parent="1" vertex="1" value="&lt;b&gt;Ingeniero de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Solicita crear o actualizar un modelo.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="290" y="60" width="200" height="140"/>
+        </mxCell>
+        <mxCell id="x-uc" parent="1" vertex="1" value="&lt;b&gt;Unity Catalog&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Metadatos, linaje, etiquetas y políticas ABAC.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="280" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-fw" parent="1" vertex="1" value="&lt;b&gt;Framework SQL&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor existente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;sistema_origen, llaves, patron_carga, tipo_scd y umbrales.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="390" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-prof" parent="1" vertex="1" value="&lt;b&gt;Data profiling&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Nulos, cardinalidad, deriva y frescura. Solo agregados.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="500" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-mcp" parent="1" vertex="1" value="&lt;b&gt;Servidores MCP gobernados&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Funciones UC e índice de contexto de negocio, si existen.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="610" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-std" parent="1" vertex="1" value="&lt;b&gt;Estándar institucional en GitHub&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Nomenclaturas, origen de capas y criterios de Data Vault.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="720" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-glos" parent="1" vertex="1" value="&lt;b&gt;Glosario de negocio del dominio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor, cuando exista]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Términos y KPIs. Aún es un entregable del piloto.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="830" width="420" height="90"/>
+        </mxCell>
+        <mxCell id="x-gw" parent="1" vertex="1" value="&lt;b&gt;Unity Gateway y Model Serving&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Invocación gobernada del foundation model hospedado por Databricks.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="940" width="420" height="110"/>
+        </mxCell>
+        <mxCell id="a-orq" parent="1" vertex="1" value="&lt;b&gt;Orquestador del ciclo&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Modos crear y actualizar. Estados BORRADOR, EN_REVISION, REQUIERE_CAMBIOS y APROBADA. No despliega ni lanza jobs.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="530" y="300" width="470" height="110"/>
+        </mxCell>
+        <mxCell id="a-sql" parent="1" vertex="1" value="&lt;b&gt;Cliente SQL parametrizado&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Service principal de menor privilegio (sp_dl_&amp;lt;amb&amp;gt; o principal del agente en dev). Sin token interactivo ni identificadores fijos.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="530" y="440" width="470" height="110"/>
+        </mxCell>
+        <mxCell id="a-mcp" parent="1" vertex="1" value="&lt;b&gt;Cliente MCP&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Comprobación de salud por servidor antes de usarlo. Configuración por ambiente.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="530" y="580" width="470" height="100"/>
+        </mxCell>
+        <mxCell id="a-ctx" parent="1" vertex="1" value="&lt;b&gt;Ensamblador del paquete de contexto&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Junta metadatos, estadísticas, estándar, etiquetas y observaciones. Sin filas ni PII en claro.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="530" y="710" width="470" height="120"/>
+        </mxCell>
+        <mxCell id="a-eval" parent="1" vertex="1" value="&lt;b&gt;Evaluador MLflow 3&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;evaluate() contra un set propio del dominio (origen de capas, contrato, KPI, vigencia SCD2). Guarda trazas y tokens.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="530" y="860" width="470" height="120"/>
+        </mxCell>
+        <mxCell id="a-slv" parent="1" vertex="1" value="&lt;b&gt;Generador de propuesta Silver&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;hk_, lecturas solo desde Bronze o Silver transversal, SCD1 por defecto, AUTO CDC o FROM SNAPSHOT, expectations. Señala Data Vault; no lo aplica solo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1110" y="300" width="560" height="140"/>
+        </mxCell>
+        <mxCell id="a-gld" parent="1" vertex="1" value="&lt;b&gt;Generador de propuesta Gold&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Estrella dim_ / fct_ y, si corresponde, agg_ o dp_. Grano, dueño y mapeo desde Silver. Gold no lee Bronze.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1110" y="460" width="560" height="120"/>
+        </mxCell>
+        <mxCell id="a-json" parent="1" vertex="1" value="&lt;b&gt;Emisor y validador del contrato JSON&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Identificador, versión, modo, entidades, lecturas, tipo_scd, patron_carga y expectations. El CI lo valida sin volver a llamar al modelo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1110" y="600" width="560" height="120"/>
+        </mxCell>
+        <mxCell id="a-art" parent="1" vertex="1" value="&lt;b&gt;Generador de artefactos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;DDL, Lakeflow, calidad/reglas.yml, documentación y etiquetas, bajo dominios/&amp;lt;dominio&amp;gt;/.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1110" y="740" width="560" height="120"/>
+        </mxCell>
+        <mxCell id="a-reg" parent="1" vertex="1" value="&lt;b&gt;Escritor del registro y de la bitácora&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Persiste propuesta, observaciones, reintento, identidad y tokens en el catálogo de control.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1110" y="880" width="560" height="110"/>
+        </mxCell>
+        <mxCell id="p-rev" parent="1" vertex="1" value="&lt;b&gt;Revisores humanos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Arquitecto de datos, data steward y, en Gold, el dueño de negocio.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="1800" y="70" width="400" height="150"/>
+        </mxCell>
+        <mxCell id="x-ctrl" parent="1" vertex="1" value="&lt;b&gt;Catálogo de control&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Registro versionado y bitácora de tokens. No es un almacén paralelo definitivo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1800" y="400" width="400" height="120"/>
+        </mxCell>
+        <mxCell id="x-mlf" parent="1" vertex="1" value="&lt;b&gt;Experimento MLflow 3&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Trazas, puntuaciones y vínculo con la PR.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1800" y="550" width="400" height="100"/>
+        </mxCell>
+        <mxCell id="x-gh" parent="1" vertex="1" value="&lt;b&gt;GitHub — pull request&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Solo con versión APROBADA. El agente no fusiona.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1800" y="680" width="400" height="130"/>
+        </mxCell>
+        <mxCell id="x-job" parent="1" vertex="1" value="&lt;b&gt;Job pl_dom_&amp;lt;dominio&amp;gt;&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor de operación]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Fuera de este ciclo. El agente no tiene herramientas para lanzarlo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1800" y="1040" width="400" height="110"/>
+        </mxCell>
+        <mxCell id="n3-agente-e1" parent="1" edge="1" source="p-ing" target="a-orq" value="Solicita crear o actualizar&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Apps opcional o API]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="390" y="230"/>
+              <mxPoint x="765" y="230"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e2" parent="1" edge="1" source="x-apps" target="a-orq" value="Interfaz de asistencia&lt;br/&gt;&lt;font style='font-size:8px'&gt;[no aprueba ni despliega]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="280" y="160"/>
+              <mxPoint x="510" y="160"/>
+              <mxPoint x="510" y="355"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e3" parent="1" edge="1" source="a-orq" target="a-sql" value="Pide inventario" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="70" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e4" parent="1" edge="1" source="a-sql" target="x-uc" value="Lee metadatos y linaje&lt;br/&gt;&lt;font style='font-size:8px'&gt;[SQL parametrizado, SP]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e5" parent="1" edge="1" source="a-sql" target="x-fw" value="Lee patrón y tipo_scd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[SQL parametrizado, SP]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e6" parent="1" edge="1" source="a-sql" target="x-prof" value="Lee estadísticas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[sin filas ni PII]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="510" y="495"/>
+              <mxPoint x="510" y="545"/>
+            </Array>
+            <mxPoint as="offset" x="-20" y="20"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e7" parent="1" edge="1" source="a-orq" target="a-mcp" value="Llama funciones gobernadas" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="560" y="420"/>
+              <mxPoint x="560" y="560"/>
+            </Array>
+            <mxPoint as="offset" x="-90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e8" parent="1" edge="1" source="a-mcp" target="x-mcp" value="Health check y consulta&lt;br/&gt;&lt;font style='font-size:8px'&gt;[MCP por ambiente]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e9" parent="1" edge="1" source="x-std" target="a-ctx" value="Norma de nombrado y modelado&lt;br/&gt;&lt;font style='font-size:8px'&gt;[repositorio del datalake]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e10" parent="1" edge="1" source="x-glos" target="a-ctx" value="Términos y KPIs, cuando existan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e11" parent="1" edge="1" source="a-sql" target="a-ctx" value="Entrega metadatos y stats" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="560"/>
+              <mxPoint x="700" y="700"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e12" parent="1" edge="1" source="a-mcp" target="a-ctx" value="Aporta contexto de negocio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="650" y="690"/>
+            </Array>
+            <mxPoint as="offset" x="-80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e13" parent="1" edge="1" source="a-ctx" target="a-slv" value="Paquete de contexto&lt;br/&gt;&lt;font style='font-size:8px'&gt;[sin PII en claro]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1040" y="770"/>
+              <mxPoint x="1040" y="370"/>
+            </Array>
+            <mxPoint as="offset" x="50" y="-40"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e14" parent="1" edge="1" source="a-ctx" target="a-gld" value="Mismo paquete, semántica Gold" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1080" y="770"/>
+              <mxPoint x="1080" y="520"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="20"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e15" parent="1" edge="1" source="a-slv" target="a-json" value="Entidades Silver y tipo_scd" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e16" parent="1" edge="1" source="a-gld" target="a-json" value="Entidades Gold y mapeo" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="-90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e17" parent="1" edge="1" source="a-json" target="a-art" value="Contrato válido&lt;br/&gt;&lt;font style='font-size:8px'&gt;[esquema validable en CI]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e18" parent="1" edge="1" source="a-orq" target="x-gw" value="Solicita inferencia&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Unity Gateway]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="510" y="355"/>
+              <mxPoint x="480" y="355"/>
+              <mxPoint x="480" y="995"/>
+            </Array>
+            <mxPoint as="offset" x="-30" y="80"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e19" parent="1" edge="1" source="a-art" target="a-eval" value="Artefactos a evaluar&lt;br/&gt;&lt;font style='font-size:8px'&gt;[set propio del dominio]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1390" y="870"/>
+              <mxPoint x="1040" y="870"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e20" parent="1" edge="1" source="a-eval" target="a-reg" value="Puntuaciones, traza y tokens&lt;br/&gt;&lt;font style='font-size:8px'&gt;[MLflow 3]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e21" parent="1" edge="1" source="a-json" target="a-reg" value="Alta BORRADOR → EN_REVISION&lt;br/&gt;&lt;font style='font-size:8px'&gt;[catálogo de control]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1690" y="660"/>
+              <mxPoint x="1690" y="870"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e22" parent="1" edge="1" source="a-reg" target="x-ctrl" value="Persiste propuesta y bitácora&lt;br/&gt;&lt;font style='font-size:8px'&gt;[framework SQL]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1760" y="935"/>
+              <mxPoint x="1760" y="560"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e23" parent="1" edge="1" source="a-eval" target="x-mlf" value="Registra traza y evaluate&lt;br/&gt;&lt;font style='font-size:8px'&gt;[MLflow 3]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="765" y="1150"/>
+              <mxPoint x="1760" y="1150"/>
+              <mxPoint x="1760" y="600"/>
+            </Array>
+            <mxPoint as="offset" x="120" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e24" parent="1" edge="1" source="x-ctrl" target="p-rev" value="Queda EN_REVISION" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2000" y="370"/>
+            </Array>
+            <mxPoint as="offset" x="-80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e25" parent="1" edge="1" source="p-rev" target="x-ctrl" value="APROBADA o REQUIERE_CAMBIOS&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera del modelo]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2100" y="240"/>
+              <mxPoint x="2100" y="390"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e26" parent="1" edge="1" source="p-rev" target="a-orq" value="Reintento solo de la generación&lt;br/&gt;&lt;font style='font-size:8px'&gt;[id, versión anterior y observaciones]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1780" y="145"/>
+              <mxPoint x="765" y="145"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e27" parent="1" edge="1" source="x-ctrl" target="x-gh" value="PR únicamente si APROBADA&lt;br/&gt;&lt;font style='font-size:8px'&gt;[revisión obligatoria]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-agente-e28" parent="1" edge="1" source="a-orq" target="x-job" value="Sin herramienta para lanzar el job&lt;br/&gt;&lt;font style='font-size:8px'&gt;[prohibido]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B42318;fontColor=#B42318;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="530" y="1290"/>
+              <mxPoint x="1780" y="1290"/>
+              <mxPoint x="1780" y="1095"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-forbid" parent="1" vertex="1" value="Prohibido: el agente no fusiona, no despliega, no escribe en Bronze, no aprueba en el chat y no lanza el job del dominio. Una confirmación en el prompt no autoriza el pase a producción." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FDECEC;strokeColor=#B42318;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="500" y="1160" width="1210" height="70"/>
+        </mxCell>
+        <mxCell id="n3-agente-legend" parent="1" vertex="1" value="&lt;b&gt;Leyenda C4&lt;/b&gt;&lt;br/&gt;Persona&lt;br/&gt;Componente&lt;br/&gt;Sistema o contenedor externo&lt;br/&gt;Relación (etiqueta + tecnología)&lt;br/&gt;Relación opcional o de rechazo (discontinua)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F6F8;strokeColor=#C5CDD6;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1440" width="400" height="180"/>
+        </mxCell>
+        <mxCell id="n3-agente-assumptions" parent="1" vertex="1" value="&lt;b&gt;Supuestos y límites&lt;/b&gt;&lt;br/&gt;• El esquema exacto del contrato JSON queda pendiente de diseño formal; debe permitir validar en el CI, sin una nueva llamada al modelo, entidades, lecturas, llaves hk_, tipo_scd, patron_carga, expectations y mapeo a Gold.&lt;br/&gt;• Qué funciones UC e índice de contexto de negocio se exponen por MCP queda pendiente. Solo servidores gobernados, con health check y rutas por ambiente.&lt;br/&gt;• El glosario de negocio aún no existe; el paquete de contexto se actualiza cuando esté disponible. No se envían filas ni PII en claro al modelo.&lt;br/&gt;• La implementación del retorno por observaciones, del registro, del MCP y de la parametrización multidominio forma parte del diseño propuesto; no se afirma como ya construida en producción.&lt;br/&gt;• Data Vault no es el camino por defecto: el agente puede señalarlo como excepción, no aplicarlo por su cuenta." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="460" y="1440" width="1740" height="180"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n3-pipeline" name="Nivel 3 Componentes del pipeline de dominio (operación)">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2240" pageHeight="1560" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n3-pipeline-title" parent="1" vertex="1" value="C4 — Nivel 3: Componentes del pipeline de dominio (operación)&lt;br/&gt;&lt;font style='font-size:12px;font-weight:normal'&gt;Job pl_dom_&amp;lt;dominio&amp;gt;: slv → control_calidad → gld → aplicar_metadatos → registrar_ejecucion.  ·  v4.1  ·  12-nov-2026&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;spacing=0;">
+          <mxGeometry as="geometry" x="20" y="12" width="2200" height="56"/>
+        </mxCell>
+        <mxCell id="n3-pipeline-footer" parent="1" vertex="1" value="Versión 4.1  ·  12-nov-2026  ·  America/Guayaquil  ·  Arquitectura objetivo en Azure Databricks  ·  El banco no se nombra" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#555555;">
+          <mxGeometry as="geometry" x="20" y="1532" width="2200" height="18"/>
+        </mxCell>
+        <mxCell id="b-job" parent="1" vertex="1" value="&lt;b&gt;Job pl_dom_&amp;lt;dominio&amp;gt;&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor — orquestación serverless; el agente no forma parte de este job]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="360" y="240" width="1440" height="700"/>
+        </mxCell>
+        <mxCell id="p-ops" parent="1" vertex="1" value="&lt;b&gt;Operación y dueño del dominio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Autorizan la primera carga en prd, en una ventana planificada.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="40" y="70" width="280" height="140"/>
+        </mxCell>
+        <mxCell id="p-ing" parent="1" vertex="1" value="&lt;b&gt;Ingeniero de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Primera ejecución manual en dev, después del deploy.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="350" y="70" width="250" height="140"/>
+        </mxCell>
+        <mxCell id="x-brz" parent="1" vertex="1" value="&lt;b&gt;Tablas Bronze&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor existente]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;&amp;lt;amb&amp;gt;_bronze. Ya pobladas. La IA no escribe aquí. 7 snapshots en cargas diarias.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="260" width="280" height="130"/>
+        </mxCell>
+        <mxCell id="x-trx" parent="1" vertex="1" value="&lt;b&gt;Silver del dominio transversal&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Única dependencia cruzada permitida. Si está atrasado, se usa la última versión válida y se alerta la frescura.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="410" width="280" height="130"/>
+        </mxCell>
+        <mxCell id="x-trig" parent="1" vertex="1" value="&lt;b&gt;Disparadores del job&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente de orquestación]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Actualización de tablas Bronze o de transversal, y un horario diario de respaldo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#102A43;fillColor=#D9D9D9;strokeColor=#8A8A8A;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="560" width="280" height="120"/>
+        </mxCell>
+        <mxCell id="t-slv" parent="1" vertex="1" value="&lt;b&gt;Tarea slv&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente: pipeline Lakeflow]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;pl_dom_&amp;lt;dominio&amp;gt;_slv. Streaming tables con AUTO CDC o AUTO CDC FROM SNAPSHOT según patron_carga. SCD1 por defecto; SCD2 solo si está justificado y registrado. Expectations WARN, DROP o FAIL. Sin MERGE manual. Lee solo Bronze o Silver transversal.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="400" y="300" width="420" height="210"/>
+        </mxCell>
+        <mxCell id="t-qc" parent="1" vertex="1" value="&lt;b&gt;Tarea control_calidad&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente: notebook de plataforma]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Porcentaje en cuarentena por tabla. Si supera el 2 % (configurable), falla, Gold no se refresca y se alerta al dueño. Notebook genérico, parametrizado por dominio.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="860" y="300" width="420" height="210"/>
+        </mxCell>
+        <mxCell id="t-gld" parent="1" vertex="1" value="&lt;b&gt;Tarea gld&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente: pipeline Lakeflow]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;pl_dom_&amp;lt;dominio&amp;gt;_gld. Materialized views dim_, fct_ y, si corresponde, agg_ o dp_. Solo corre si pasa la calidad. Lecturas únicamente desde Silver.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1320" y="300" width="450" height="210"/>
+        </mxCell>
+        <mxCell id="t-meta" parent="1" vertex="1" value="&lt;b&gt;Tarea aplicar_metadatos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente: notebook de plataforma]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Comentarios, etiquetas gobernadas, máscaras o filtros ABAC y permisos de grp_dl_&amp;lt;dominio&amp;gt;_{own,dev,lec} y sp_dl_&amp;lt;amb&amp;gt;. Idempotente, cuando los objetos ya existen.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="860" y="600" width="420" height="200"/>
+        </mxCell>
+        <mxCell id="t-reg" parent="1" vertex="1" value="&lt;b&gt;Tarea registrar_ejecucion&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Componente: notebook de plataforma]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Siempre corre (ALL_DONE), con o sin refresco de Gold. Escribe &amp;lt;amb&amp;gt;_control.framework.ejecucion, la conciliación y el estado en el framework SQL.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#0A2F4A;fillColor=#85BBF0;strokeColor=#5D8EBA;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1320" y="600" width="450" height="200"/>
+        </mxCell>
+        <mxCell id="d-slv" parent="1" vertex="1" value="&lt;b&gt;Catálogo Silver&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor de datos]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;&amp;lt;amb&amp;gt;_silver. Objetos creados en la primera ejecución y refrescados después.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="400" y="980" width="360" height="110"/>
+        </mxCell>
+        <mxCell id="d-gld" parent="1" vertex="1" value="&lt;b&gt;Catálogo Gold&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor de datos]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;&amp;lt;amb&amp;gt;_gold. No se publica si falla la calidad o la conciliación.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="800" y="980" width="360" height="110"/>
+        </mxCell>
+        <mxCell id="d-ctl" parent="1" vertex="1" value="&lt;b&gt;Catálogo de control&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor de datos]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;&amp;lt;amb&amp;gt;_control: calidad.regla, framework.ejecucion y conciliación.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1200" y="980" width="420" height="110"/>
+        </mxCell>
+        <mxCell id="x-alert" parent="1" vertex="1" value="&lt;b&gt;Alerta al dueño&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Si falla la calidad o la conciliación, Gold no se da por publicado.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1860" y="300" width="340" height="130"/>
+        </mxCell>
+        <mxCell id="x-sp" parent="1" vertex="1" value="&lt;b&gt;Service principal sp_dl_&amp;lt;amb&amp;gt;&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Identidad que ejecuta el job. En prd no corre un usuario interactivo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1860" y="460" width="340" height="120"/>
+        </mxCell>
+        <mxCell id="x-ag" parent="1" vertex="1" value="&lt;b&gt;Agente de modelado&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Fuera de este job]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;No interviene en este tramo y no tiene herramientas para lanzarlo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1860" y="620" width="340" height="120"/>
+        </mxCell>
+        <mxCell id="n3-pipeline-e1" parent="1" edge="1" source="p-ops" target="x-trig" value="Autoriza la primera carga en prd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[ventana planificada]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="80" y="230"/>
+              <mxPoint x="20" y="230"/>
+              <mxPoint x="20" y="620"/>
+            </Array>
+            <mxPoint as="offset" x="70" y="40"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e2" parent="1" edge="1" source="p-ing" target="t-slv" value="Primera ejecución manual en dev&lt;br/&gt;&lt;font style='font-size:8px'&gt;[tras bundle deploy]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="475" y="230"/>
+              <mxPoint x="610" y="230"/>
+            </Array>
+            <mxPoint as="offset" x="90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e3" parent="1" edge="1" source="x-brz" target="x-trig" value="Actualización de tablas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[table trigger]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e4" parent="1" edge="1" source="x-trx" target="x-trig" value="Actualización de transversal&lt;br/&gt;&lt;font style='font-size:8px'&gt;[table trigger]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="-90" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e5" parent="1" edge="1" source="x-trig" target="t-slv" value="Inicia el job&lt;br/&gt;&lt;font style='font-size:8px'&gt;[o horario diario de respaldo]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="350" y="620"/>
+              <mxPoint x="350" y="405"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e6" parent="1" edge="1" source="x-brz" target="t-slv" value="Lee snapshots o cambios&lt;br/&gt;&lt;font style='font-size:8px'&gt;[AUTO CDC / FROM SNAPSHOT]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e7" parent="1" edge="1" source="x-trx" target="t-slv" value="Lee entidades compartidas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[única dependencia cruzada]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e8" parent="1" edge="1" source="t-slv" target="t-qc" value="Silver materializado&lt;br/&gt;&lt;font style='font-size:8px'&gt;[expectations ya aplicadas]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e9" parent="1" edge="1" source="t-qc" target="t-gld" value="Pasa el umbral de cuarentena&lt;br/&gt;&lt;font style='font-size:8px'&gt;[2 % por defecto]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e10" parent="1" edge="1" source="t-qc" target="x-alert" value="Falla: no refresca Gold&lt;br/&gt;&lt;font style='font-size:8px'&gt;[alerta al dueño]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=0;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1070" y="270"/>
+              <mxPoint x="1840" y="270"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e11" parent="1" edge="1" source="t-slv" target="t-meta" value="Objetos Silver ya existentes&lt;br/&gt;&lt;font style='font-size:8px'&gt;[idempotente]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="610" y="545"/>
+              <mxPoint x="840" y="545"/>
+            </Array>
+            <mxPoint as="offset" x="-20" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e12" parent="1" edge="1" source="t-gld" target="t-meta" value="Objetos Gold ya existentes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1545" y="575"/>
+              <mxPoint x="1300" y="575"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e13" parent="1" edge="1" source="t-meta" target="t-reg" value="Metadatos aplicados" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e14" parent="1" edge="1" source="t-qc" target="t-reg" value="Siempre termina en el registro&lt;br/&gt;&lt;font style='font-size:8px'&gt;[run_if ALL_DONE]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1300" y="530"/>
+              <mxPoint x="1545" y="530"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e15" parent="1" edge="1" source="t-slv" target="d-slv" value="Crea o refresca tablas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[1.ª ejecución = backfill]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="610" y="950"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e16" parent="1" edge="1" source="t-gld" target="d-gld" value="Crea o refresca MVs&lt;br/&gt;&lt;font style='font-size:8px'&gt;[solo si pasó calidad]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1545" y="950"/>
+              <mxPoint x="980" y="950"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e17" parent="1" edge="1" source="t-reg" target="d-ctl" value="Ejecución y conciliación&lt;br/&gt;&lt;font style='font-size:8px'&gt;[framework SQL]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e18" parent="1" edge="1" source="d-slv" target="d-gld" value="Gold se materializa desde Silver&lt;br/&gt;&lt;font style='font-size:8px'&gt;[origen de capas]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e19" parent="1" edge="1" source="x-sp" target="t-gld" value="Identidad de ejecución del job&lt;br/&gt;&lt;font style='font-size:8px'&gt;[sp_dl_&amp;lt;amb&amp;gt;]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1840" y="520"/>
+              <mxPoint x="1840" y="405"/>
+            </Array>
+            <mxPoint as="offset" x="20" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3-pipeline-e20" parent="1" edge="1" source="x-ag" target="t-reg" value="Sin invocación ni disparo&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fuera del job]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B42318;fontColor=#B42318;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="2030" y="760"/>
+              <mxPoint x="2030" y="900"/>
+              <mxPoint x="1840" y="900"/>
+              <mxPoint x="1840" y="700"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n3p-first" parent="1" vertex="1" value="Primera ejecución (carga inicial): crea los objetos en Unity Catalog y hace el backfill desde Bronze (snapshots en orden de _version_snapshot; no se inventa historia). Se aplica calidad, cuarentena y conciliación. Si fallan, la carga inicial no se da por cerrada y Gold no se publica.&lt;br/&gt;Ejecuciones siguientes: incrementales, con el mismo flujo, sin la autorización excepcional de la primera carga, salvo que un cambio de modelo exija un full refresh selectivo de Silver o Gold (nunca de Bronze en prd). Rollback de código: redeploy de la versión etiquetada anterior." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#E8F1FB;strokeColor=#2E6295;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="360" y="1130" width="1440" height="140"/>
+        </mxCell>
+        <mxCell id="n3p-dep" parent="1" vertex="1" value="bundle deploy no carga datos.&lt;br/&gt;La ejecución es un acto distinto." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="1860" y="780" width="340" height="80"/>
+        </mxCell>
+        <mxCell id="n3-pipeline-legend" parent="1" vertex="1" value="&lt;b&gt;Leyenda C4&lt;/b&gt;&lt;br/&gt;Persona&lt;br/&gt;Contenedor&lt;br/&gt;Componente&lt;br/&gt;Sistema o contenedor externo&lt;br/&gt;Componente externo&lt;br/&gt;Relación (etiqueta + tecnología)&lt;br/&gt;Relación opcional o de rechazo (discontinua)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F6F8;strokeColor=#C5CDD6;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1320" width="400" height="200"/>
+        </mxCell>
+        <mxCell id="n3-pipeline-assumptions" parent="1" vertex="1" value="&lt;b&gt;Supuestos y límites&lt;/b&gt;&lt;br/&gt;• Este tramo ocurre después de un bundle deploy exitoso. Ese comando publica o actualiza el pipeline y el job, y sincroniza calidad/reglas.yml a &amp;lt;amb&amp;gt;_control.calidad.regla; no inserta filas de negocio.&lt;br/&gt;• En Lakeflow Declarative Pipelines la definición es el código: la primera ejecución crea las streaming tables, las tablas AUTO CDC y las materialized views. El DDL de la PR queda para comentarios, etiquetas, máscaras y permisos, aplicados de forma idempotente cuando el objeto ya existe.&lt;br/&gt;• El umbral formal de conciliación entre Silver y Bronze (y Gold y Silver) está pendiente. El umbral de cuarentena es 2 % por defecto, configurable en el framework.&lt;br/&gt;• En prd, la primera carga se ejecuta en una ventana planificada, con aprobación del dueño del dominio y de operación, autenticada con sp_dl_prd; nunca un usuario interactivo y nunca el agente. La ventana concreta y los oficios de operación están pendientes.&lt;br/&gt;• Bronze conserva los últimos 7 snapshots en cargas diarias: un SCD2 no inventa historia anterior a esa ventana. En prd, Bronze no admite full refresh (pipelines.reset.allowed = false).&lt;br/&gt;• De qué Bronze se alimentan los catálogos de QA sigue siendo una decisión pendiente. El cómputo es serverless." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="460" y="1320" width="1740" height="200"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="n4-despliegue" name="Despliegue">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2240" pageHeight="1560" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="n4-despliegue-title" parent="1" vertex="1" value="C4 — Vista de despliegue&lt;br/&gt;&lt;font style='font-size:12px;font-weight:normal'&gt;Dos workspaces, tres targets DABs (dev, qa, prd) y compuertas de promoción.  ·  v4.1  ·  12-nov-2026&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;spacing=0;">
+          <mxGeometry as="geometry" x="20" y="12" width="2200" height="56"/>
+        </mxCell>
+        <mxCell id="n4-despliegue-footer" parent="1" vertex="1" value="Versión 4.1  ·  12-nov-2026  ·  America/Guayaquil  ·  Arquitectura objetivo en Azure Databricks  ·  El banco no se nombra" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontColor=#555555;">
+          <mxGeometry as="geometry" x="20" y="1532" width="2200" height="18"/>
+        </mxCell>
+        <mxCell id="b-dev" parent="1" vertex="1" value="&lt;b&gt;Workspace de desarrollo&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Nodo de despliegue — catálogos dev_* y qa_*]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="40" y="340" width="1060" height="600"/>
+        </mxCell>
+        <mxCell id="b-prd" parent="1" vertex="1" value="&lt;b&gt;Workspace de producción&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Nodo de despliegue — catálogos prd_*]&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;dashPattern=8 8;strokeColor=#666666;fillColor=#FAFBFC;verticalAlign=top;align=left;fontColor=#666666;fontSize=11;fontStyle=1;spacingTop=4;spacingLeft=12;">
+          <mxGeometry as="geometry" x="1160" y="340" width="1040" height="600"/>
+        </mxCell>
+        <mxCell id="p-ing" parent="1" vertex="1" value="&lt;b&gt;Ingeniero de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Rama feature y primera ejecución en dev.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="40" y="80" width="210" height="140"/>
+        </mxCell>
+        <mxCell id="p-arq" parent="1" vertex="1" value="&lt;b&gt;Arquitecto de datos&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Revisa además el primer PR de un dominio.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="270" y="80" width="220" height="140"/>
+        </mxCell>
+        <mxCell id="p-rev" parent="1" vertex="1" value="&lt;b&gt;Steward y dueño del dominio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Revisión de la PR; el dueño aprueba el tag a prd.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="510" y="80" width="250" height="140"/>
+        </mxCell>
+        <mxCell id="p-ops" parent="1" vertex="1" value="&lt;b&gt;Operación de plataforma&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Persona]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Aprueba, con el dueño, la primera carga en prd.&lt;/font&gt;" style="html=1;fontSize=11;fontColor=#ffffff;strokeColor=#052E56;fillColor=#08427B;shape=mxgraph.c4.person2;whiteSpace=wrap;align=center;verticalAlign=middle;metaEdit=0;points=[[0.5,0,0],[1,0.5,0],[1,0.75,0],[0.75,1,0],[0.5,1,0],[0.25,1,0],[0,0.75,0],[0,0.5,0]];">
+          <mxGeometry as="geometry" x="780" y="80" width="230" height="140"/>
+        </mxCell>
+        <mxCell id="x-gh" parent="1" vertex="1" value="&lt;b&gt;GitHub — repositorio del datalake&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Ramas feature/&amp;lt;dominio&amp;gt;-… o fix/… y PR hacia main, con revisión obligatoria. Promoción a producción solo con tag aprobado.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1060" y="80" width="540" height="150"/>
+        </mxCell>
+        <mxCell id="x-gha" parent="1" vertex="1" value="&lt;b&gt;GitHub Actions + DABs&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Federación OIDC hacia Databricks. Targets dev, qa y prd. bundle deploy publica pipelines y jobs; no carga datos.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1640" y="80" width="560" height="150"/>
+        </mxCell>
+        <mxCell id="d-devcat" parent="1" vertex="1" value="&lt;b&gt;Catálogos dev_*&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Unity Catalog]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;dev_landing, dev_bronze, dev_silver, dev_gold, dev_control. Primera ejecución manual, a cargo de quien desarrolla.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="70" y="400" width="480" height="140"/>
+        </mxCell>
+        <mxCell id="d-qacat" parent="1" vertex="1" value="&lt;b&gt;Catálogos qa_*&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Unity Catalog]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;qa_* en este mismo workspace. Tras fusionar a main, el CI despliega y ejecuta pipelines con datos de prueba.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="580" y="400" width="490" height="140"/>
+        </mxCell>
+        <mxCell id="d-ag" parent="1" vertex="1" value="&lt;b&gt;Agente, Apps opcional y MLflow 3&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedores de desarrollo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;El agente corre aquí, con un SP de menor privilegio. No escribe en QA ni en prd con un usuario interactivo.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="70" y="570" width="480" height="140"/>
+        </mxCell>
+        <mxCell id="d-jobdev" parent="1" vertex="1" value="&lt;b&gt;Job y pipelines del dominio (dev / qa)&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;pl_dom_&amp;lt;dominio&amp;gt;, slv y gld, parametrizados por ambiente. En dev la primera carga es manual; en qa, automática tras la fusión.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="580" y="570" width="490" height="140"/>
+        </mxCell>
+        <mxCell id="d-spdev" parent="1" vertex="1" value="&lt;b&gt;sp_dl_dev y sp_dl_qa&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Identidad]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Dueños de los objetos de cada target. Secretos en kv-dl-dev y kv-dl-qa.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#102A43;fillColor=#D9D9D9;strokeColor=#8A8A8A;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="70" y="740" width="480" height="140"/>
+        </mxCell>
+        <mxCell id="d-grp" parent="1" vertex="1" value="&lt;b&gt;Grupos del dominio&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Identidad]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;grp_dl_&amp;lt;dominio&amp;gt;_{own,dev,lec}, emitidos desde Entra ID.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#102A43;fillColor=#D9D9D9;strokeColor=#8A8A8A;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="580" y="740" width="490" height="140"/>
+        </mxCell>
+        <mxCell id="r-cat" parent="1" vertex="1" value="&lt;b&gt;Catálogos prd_*&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor: Unity Catalog]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;prd_landing, prd_bronze, prd_silver, prd_gold, prd_control. Solo se vinculan a este workspace.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1190" y="400" width="470" height="140"/>
+        </mxCell>
+        <mxCell id="r-job" parent="1" vertex="1" value="&lt;b&gt;Job y pipelines del dominio (prd)&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Primera carga en ventana planificada. Siguientes: incrementales. Bronze con pipelines.reset.allowed = false.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1690" y="400" width="480" height="140"/>
+        </mxCell>
+        <mxCell id="r-sp" parent="1" vertex="1" value="&lt;b&gt;sp_dl_prd&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Identidad]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Ejecuta el job y es dueño de los objetos. Nunca un usuario interactivo y nunca el agente.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#102A43;fillColor=#D9D9D9;strokeColor=#8A8A8A;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1190" y="570" width="470" height="140"/>
+        </mxCell>
+        <mxCell id="r-sec" parent="1" vertex="1" value="&lt;b&gt;Gobierno en producción&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Contenedor]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;ABAC, máscaras, etiquetas gobernadas, linaje, event log y registro de ejecución. Nadie escribe con su usuario.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#438DD5;strokeColor=#2E6295;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1690" y="570" width="480" height="140"/>
+        </mxCell>
+        <mxCell id="r-noag" parent="1" vertex="1" value="&lt;b&gt;Sin agente publicador&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Fuera de prd]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;El agente no despliega, no se autentica para lanzar jobs y no escribe en estos catálogos.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#102A43;fillColor=#D9D9D9;strokeColor=#8A8A8A;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1190" y="740" width="980" height="140"/>
+        </mxCell>
+        <mxCell id="x-entra" parent="1" vertex="1" value="&lt;b&gt;Microsoft Entra ID&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Un solo tenant. Identidad corporativa, grupos y federación.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="40" y="1000" width="400" height="110"/>
+        </mxCell>
+        <mxCell id="x-kv" parent="1" vertex="1" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Scopes kv-dl-dev, kv-dl-qa y kv-dl-prd. Los secretos no viven en el código.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="470" y="1000" width="420" height="110"/>
+        </mxCell>
+        <mxCell id="x-ncc" parent="1" vertex="1" value="&lt;b&gt;Conectividad privada&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Network Connectivity Configurations u otro enlace privado, cuando aplique.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="920" y="1000" width="400" height="110"/>
+        </mxCell>
+        <mxCell id="x-mon" parent="1" vertex="1" value="&lt;b&gt;Azure Monitor / Log Analytics&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Auditoría de despliegues, event logs de Lakeflow y bitácoras de control.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1350" y="1000" width="400" height="110"/>
+        </mxCell>
+        <mxCell id="x-fm" parent="1" vertex="1" value="&lt;b&gt;Foundation models hospedados por Databricks&lt;/b&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;[Sistema externo]&lt;/font&gt;&lt;br/&gt;&lt;font style='font-size:9px'&gt;Inferencia vía Unity Gateway / Model Serving. Disponibilidad en la región, pendiente de confirmar.&lt;/font&gt;" style="html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontSize=11;fontColor=#FFFFFF;fillColor=#999999;strokeColor=#6B6B6B;rounded=1;arcSize=8;metaEdit=0;spacing=4;spacingTop=4;">
+          <mxGeometry as="geometry" x="1780" y="1000" width="420" height="110"/>
+        </mxCell>
+        <mxCell id="n4-despliegue-e1" parent="1" edge="1" source="p-ing" target="x-gh" value="Abre la rama y la PR&lt;br/&gt;&lt;font style='font-size:8px'&gt;[solo versión APROBADA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="145" y="245"/>
+              <mxPoint x="1330" y="245"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e2" parent="1" edge="1" source="p-arq" target="x-gh" value="Revisa el primer PR del dominio" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="380" y="260"/>
+              <mxPoint x="1330" y="260"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e3" parent="1" edge="1" source="p-rev" target="x-gh" value="Aprueba la PR; el dueño aprueba el tag&lt;br/&gt;&lt;font style='font-size:8px'&gt;[sin autopromoción]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e4" parent="1" edge="1" source="x-gh" target="x-gha" value="Dispara el CI/CD&lt;br/&gt;&lt;font style='font-size:8px'&gt;[GitHub Actions, OIDC, DABs]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e5" parent="1" edge="1" source="x-gha" target="d-devcat" value="bundle deploy target dev&lt;br/&gt;&lt;font style='font-size:8px'&gt;[rama feature; no carga datos]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1920" y="270"/>
+              <mxPoint x="310" y="270"/>
+            </Array>
+            <mxPoint as="offset" x="-220" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e6" parent="1" edge="1" source="x-gha" target="d-qacat" value="bundle deploy target qa + pruebas&lt;br/&gt;&lt;font style='font-size:8px'&gt;[fusión a main; 1.ª carga de QA]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1920" y="290"/>
+              <mxPoint x="825" y="290"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e7" parent="1" edge="1" source="x-gha" target="r-job" value="bundle deploy target prd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[tag + dueño; no carga datos]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1930" y="310"/>
+              <mxPoint x="1930" y="380"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e8" parent="1" edge="1" source="p-ing" target="d-jobdev" value="Primera ejecución manual en dev&lt;br/&gt;&lt;font style='font-size:8px'&gt;[bundle run / disparo del job]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="40" y="230"/>
+              <mxPoint x="40" y="640"/>
+              <mxPoint x="560" y="640"/>
+            </Array>
+            <mxPoint as="offset" x="70" y="40"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e9" parent="1" edge="1" source="p-ops" target="r-job" value="Autoriza la primera carga en prd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[ventana planificada; corre sp_dl_prd]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="895" y="250"/>
+              <mxPoint x="1140" y="250"/>
+              <mxPoint x="1140" y="470"/>
+            </Array>
+            <mxPoint as="offset" x="30" y="-16"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e10" parent="1" edge="1" source="d-ag" target="d-devcat" value="Lee metadatos; escribe el registro en dev_control&lt;br/&gt;&lt;font style='font-size:8px'&gt;[SP de menor privilegio]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e11" parent="1" edge="1" source="d-jobdev" target="d-devcat" value="Puebla objetos en dev&lt;br/&gt;&lt;font style='font-size:8px'&gt;[1.ª ejecución + incrementales]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="700" y="555"/>
+            </Array>
+            <mxPoint as="offset" x="-80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e12" parent="1" edge="1" source="d-jobdev" target="d-qacat" value="Puebla objetos en qa&lt;br/&gt;&lt;font style='font-size:8px'&gt;[CI tras la fusión]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="950" y="555"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e13" parent="1" edge="1" source="r-job" target="r-cat" value="Puebla objetos en prd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[1.ª carga autorizada e incrementales]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e14" parent="1" edge="1" source="r-sp" target="r-job" value="Ejecuta el job&lt;br/&gt;&lt;font style='font-size:8px'&gt;[nunca el agente]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1680" y="640"/>
+              <mxPoint x="1930" y="640"/>
+            </Array>
+            <mxPoint as="offset" x="0" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e15" parent="1" edge="1" source="x-entra" target="d-spdev" value="Emite identidades y grupos&lt;br/&gt;&lt;font style='font-size:8px'&gt;[un solo tenant]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e16" parent="1" edge="1" source="x-entra" target="r-sp" value="Emite sp_dl_prd y grupos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="240" y="990"/>
+              <mxPoint x="1140" y="990"/>
+              <mxPoint x="1140" y="710"/>
+            </Array>
+            <mxPoint as="offset" x="200" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e17" parent="1" edge="1" source="x-kv" target="d-spdev" value="Secretos de dev y qa&lt;br/&gt;&lt;font style='font-size:8px'&gt;[kv-dl-&amp;lt;amb&amp;gt;]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="600" y="980"/>
+              <mxPoint x="310" y="980"/>
+            </Array>
+            <mxPoint as="offset" x="-40" y="14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e18" parent="1" edge="1" source="x-kv" target="r-sp" value="Secretos de prd&lt;br/&gt;&lt;font style='font-size:8px'&gt;[kv-dl-prd]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="800" y="965"/>
+              <mxPoint x="1140" y="965"/>
+              <mxPoint x="1140" y="720"/>
+              <mxPoint x="1425" y="720"/>
+            </Array>
+            <mxPoint as="offset" x="40" y="-12"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e19" parent="1" edge="1" source="r-cat" target="x-mon" value="Auditoría y linaje&lt;br/&gt;&lt;font style='font-size:8px'&gt;[UC, event log, framework]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1425" y="960"/>
+            </Array>
+            <mxPoint as="offset" x="80" y="0"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e20" parent="1" edge="1" source="d-ag" target="x-fm" value="Inferencia gobernada en desarrollo&lt;br/&gt;&lt;font style='font-size:8px'&gt;[Unity Gateway, Model Serving]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="310" y="945"/>
+              <mxPoint x="1990" y="945"/>
+            </Array>
+            <mxPoint as="offset" x="250" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-despliegue-e21" parent="1" edge="1" source="x-ncc" target="r-noag" value="Conectividad privada, cuando aplique&lt;br/&gt;&lt;font style='font-size:8px'&gt;[NCC u otro enlace]&lt;/font&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#555555;fontColor=#555555;fontSize=9;endArrow=block;endFill=1;labelBackgroundColor=#FFFFFF;exitPerimeter=1;entryPerimeter=1;dashed=1;dashPattern=8 6;exitX=0.5;exitY=0;entryX=0.5;entryY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="offset" x="0" y="-14"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="n4-promo" parent="1" vertex="1" value="Compuertas: rama feature → deploy dev (sin carga automática). PR aprobada y fusionada a main → deploy qa + pruebas (primera carga de QA). Tag y aprobación del dueño del dominio → deploy prd (sin carga). Primera carga en prd: acto distinto, ventana planificada, dueño + operación, sp_dl_prd." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#E8F1FB;strokeColor=#2E6295;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1160" width="2160" height="90"/>
+        </mxCell>
+        <mxCell id="n4-despliegue-legend" parent="1" vertex="1" value="&lt;b&gt;Leyenda C4&lt;/b&gt;&lt;br/&gt;Persona&lt;br/&gt;Contenedor&lt;br/&gt;Sistema o contenedor externo&lt;br/&gt;Componente externo&lt;br/&gt;Relación (etiqueta + tecnología)&lt;br/&gt;Relación opcional o de rechazo (discontinua)" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#F4F6F8;strokeColor=#C5CDD6;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="40" y="1320" width="400" height="200"/>
+        </mxCell>
+        <mxCell id="n4-despliegue-assumptions" parent="1" vertex="1" value="&lt;b&gt;Supuestos y límites&lt;/b&gt;&lt;br/&gt;• El banco confirmó dos workspaces (desarrollo y producción) y la ausencia de un workspace de QA. La ubicación de los catálogos qa_* en el workspace de desarrollo, y prd_* en el de producción, adopta el estándar institucional y está pendiente de ratificación.&lt;br/&gt;• La fusión de una PR y la promoción al workspace de producción son aprobaciones distintas. No hay autopromoción. Las personas revisoras concretas aún no están nominadas.&lt;br/&gt;• OIDC se representa como mecanismo de federación de GitHub Actions hacia Databricks, habitual con DABs; la propuesta v4.1 cita Actions y DABs y no detalla esa federación.&lt;br/&gt;• De qué Bronze se alimentan los catálogos de QA es decisión pendiente. En prd, Bronze no admite full refresh.&lt;br/&gt;• Conectividad privada hacia recursos del tenant (por ejemplo, Network Connectivity Configurations) se aplica cuando corresponda.&lt;br/&gt;• No se representan identificadores reales de workspace, almacén o job; todo se parametriza por ambiente." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;align=left;verticalAlign=top;fillColor=#FFF8E6;strokeColor=#C9A227;fontSize=9;fontColor=#102A43;spacing=8;spacingTop=6;">
+          <mxGeometry as="geometry" x="460" y="1320" width="1740" height="200"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
